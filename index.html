@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>L’Étoile Clermont-Ferrand — Tacos, Burgers & Sandwichs</title>
   <meta name="description" content="L’Étoile Clermont-Ferrand : tacos, burgers, sandwichs, bowls, frites maison, menus et box. Site premium responsive." />
-  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="noise"></div>
   <header class="nav">
-    <a class="brand" href="#home"><img src="assets/logo.png" alt="L'Étoile logo"><span>CLERMONT</span></a>
+    <a class="brand" href="#home"><img src="assets/logo-transparent.png" alt="L'Étoile Clermont"><span>CLERMONT</span></a>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav>
       <a href="#home">Accueil</a><a href="#carte">Carte</a><a href="#best">Best Sellers</a><a href="#galerie">Galerie</a><a href="#contact">Contact</a>
@@ -20,16 +19,26 @@
   </header>
 
   <main id="home">
-    <section class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-copy reveal">
+    <section class="hero hero-poster">
+      <div class="poster-bg" aria-hidden="true"></div>
+      <div class="poster-shade" aria-hidden="true"></div>
+      <div class="quality-row reveal">
+        <div><span>🥩</span><b>VIANDES<br>DE QUALITÉ</b></div>
+        <div><span>🍟</span><b>FRITES<br>MAISON</b></div>
+        <div><span>🥫</span><b>SAUCES<br>SIGNATURE</b></div>
+        <div><span>👨‍🍳</span><b>RECETTES<br>ORIGINALES</b></div>
+        <div><span>🏅</span><b>QUALITÉ<br>GARANTIE</b></div>
+      </div>
+      <div class="poster-copy reveal">
+        <img class="hero-logo" src="assets/logo-transparent.png" alt="L'Étoile">
         <p class="eyebrow">TACOS • BURGERS • SANDWICHS • FRITES MAISON</p>
         <h1>LE GOÛT DE <span>L’EXCELLENCE</span></h1>
-        <p class="lead">Un site premium façon campagne restaurant : menu réel, visuels ultra appétissants, commande rapide et expérience mobile propre.</p>
+        <p class="lead">Frais, généreux et tellement bon. Une expérience premium façon campagne restaurant.</p>
         <div class="hero-actions"><a href="#carte" class="order">Voir la carte</a><a href="tel:0473905738" class="outline">Appeler</a></div>
-        <div class="badges"><b>Viandes de qualité</b><b>Sauces signature</b><b>Ouvert 7j/7</b></div>
       </div>
-      <div class="hero-visual reveal"><img src="assets/hero-banner.png" alt="Banner restaurant premium tacos burgers frites"></div>
+      <div class="poster-contact reveal">
+        <span>📍 Clermont-Ferrand</span><span>☎ 04 73 90 57 38</span><span>🌐 letoile-clermont.com</span>
+      </div>
       <div class="scroll">SCROLL</div>
     </section>
 
@@ -84,7 +93,7 @@
     </section>
   </main>
 
-  <footer><img src="assets/logo.png" alt="Logo"><p>© L’Étoile Clermont — Premium restaurant website concept.</p><a href="tel:0473905738">Commander maintenant</a></footer>
+  <footer><img src="assets/logo-transparent.png" alt="Logo"><p>© L’Étoile Clermont — Premium restaurant website concept.</p><a href="tel:0473905738">Commander maintenant</a></footer>
 
   <script src="menu-data.js"></script>
   <script src="script.js"></script>
