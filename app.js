@@ -1,4 +1,15 @@
-const img={tacos:'https://images.unsplash.com/photo-1610614819513-58e34989848b?auto=format&fit=crop&w=900&q=85',burger:'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85',fries:'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&w=900&q=85',chicken:'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=85',bowl:'https://images.unsplash.com/photo-1547496502-affa22d38842?auto=format&fit=crop&w=900&q=85',sandwich:'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=85',dessert:'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85'};
+const official='https://www.letoile-clermont.com/wp-content/uploads/';
+const img={
+  hero:'https://www.letoile-clermont.com/wp-content/uploads/2026/01/Letoile-Tacos-Campagne-Produit-01-Goodsite-Banniere-scaled.jpg',
+  tacos:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/slider-1.jpg',
+  burger:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/encart1-large.jpg',
+  chicken:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/encart2-large.jpg',
+  texmex:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/encart2-large.jpg',
+  sandwich:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/encart3-large.jpg',
+  fries:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/slider-1.jpg',
+  bowl:'https://www.letoile-clermont.com/wp-content/uploads/2026/01/Letoile-Tacos-Campagne-Produit-01-Goodsite-Banniere-scaled.jpg',
+  dessert:'https://www.letoile-clermont.com/wp-content/uploads/2024/07/slider-1.jpg'
+};
 const composer=[['SIMPLE','Taille M • 1 galette, 1 viande','8.00€'],['MAXI','Taille L • 2 galettes, 2 viandes','12.00€'],['MEGA','Taille XL • 3 galettes, 3 viandes','15.00€'],['GIGA','Taille XXL • 4 galettes, 4 viandes','18.00€']];
 const menu=[
 {cat:'Tacos signatures',name:'O’Majestik',desc:'Sauce fromagère, poulet curry, mozza, boursin, chakchouka.',price:'10.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Thentik',desc:'Steak, tomates, oignons grillés, poivrons, œuf, emmental, frites.',price:'12.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Chèvre Miel',desc:'Sauce fromagère, kebab, chèvre miel.',price:'10.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Spicy',desc:'Viande hachée, onion rings, oignons frits, reblochon, chakchouka, frites.',price:'12.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Xford',desc:'Sauce fromagère, steak, mozzarella, rostie.',price:'10.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Rientale',desc:'Merguez, kefta, olives, poivrons, mozza, chakchouka.',price:'12.00€',image:img.tacos},{cat:'Tacos signatures',name:'Montagnard',desc:'Viande au choix, lardons, oignons frits, mozza, reblochon, frites.',price:'10.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Vergnat',desc:'Tenders, nuggets, bleu, rostie, frites.',price:'12.00€',image:img.tacos},{cat:'Tacos signatures',name:'O’Riginal',desc:'Cordon bleu, poulet pané, oignons frits, raclette.',price:'12.00€',image:img.tacos},{cat:'Tacos signatures',name:'Végétarien',desc:'Galette de pomme de terre, œuf, falafel, frites.',price:'8.00€',image:img.tacos},

@@ -17,3 +17,6 @@ Les images sont des placeholders Unsplash. Remplace les URLs dans `app.js` par l
 
 ## Modifier le menu
 Tout est dans `app.js`, tableau `menu`. Change `name`, `desc`, `price`, `image`.
+
+
+Update: images officielles ajoutées via URLs du site letoile-clermont.com (hero, burgers, texmex, sandwichs, tacos/frites).
