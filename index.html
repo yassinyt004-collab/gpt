@@ -1,8 +1,120 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L’Étoile Clermont-Ferrand – Tacos, Burgers, Sandwichs</title><meta name="description" content="L’Étoile Clermont-Ferrand : tacos à composer, burgers, sandwichs, bowls, menus, desserts et boissons."><link rel="stylesheet" href="style.css"></head><body>
-<header><a class="brand" href="#top"><img src="assets/logo.png" alt="L'Étoile"><span>CLERMONT</span></a><nav><a href="#carte">Carte</a><a href="#qualite">Qualité</a><a href="#galerie">Galerie</a><a href="#contact">Contact</a><a class="btn small" href="tel:0473905738">Commander</a></nav><button id="hamb">☰</button></header>
-<main id="top"><section class="hero"><div class="heroText"><p class="eyebrow">Tacos • Burgers • Sandwichs • Frites maison</p><h1>Le goût de <span>l’excellence</span></h1><p>Un site premium, rapide et complet pour L’Étoile Clermont : menu réel, prix, contacts et expérience mobile propre.</p><div class="actions"><a class="btn" href="#carte">Voir la carte</a><a class="btn ghost" href="tel:0473905738">Appeler</a></div><div class="badges"><b>Viandes de qualité</b><b>Sauces signature</b><b>Ouvert 7j/7</b></div></div><div class="heroImg"><img src="assets/hero-food.png" alt="Tacos burgers frites"></div></section>
-<section id="carte" class="section"><div class="sectionHead"><p class="eyebrow">Menu officiel structuré</p><h2>Notre carte</h2><input id="search" placeholder="Rechercher : tacos, burger, frites..."></div><div id="tabs" class="tabs"></div><div id="menuGrid" class="grid"></div></section>
-<section id="qualite" class="quality"><h2>Pourquoi choisir L’Étoile ?</h2><div class="qgrid"><article>🔥<h3>Cuisson maîtrisée</h3><p>Des recettes généreuses préparées avec soin.</p></article><article>⭐<h3>Qualité garantie</h3><p>Menu clair, prix visibles, présentation premium.</p></article><article>📍<h3>Deux adresses</h3><p>Ballainvilliers et Montferrand à Clermont-Ferrand.</p></article><article>📱<h3>Responsive</h3><p>Design propre sur téléphone, tablette et desktop.</p></article></div></section>
-<section id="galerie" class="section"><div class="sectionHead"><p class="eyebrow">Galerie</p><h2>Produits populaires</h2></div><div class="gallery"><img src="assets/burger-double.jpg"><img src="assets/tacos.jpg"><img src="assets/fries.jpg"><img src="assets/bowl.jpg"><img src="assets/texmex.jpg"><img src="assets/dessert.jpg"></div></section>
-<section id="contact" class="contact"><div><p class="eyebrow">Contact</p><h2>Commander ou venir nous voir</h2><p><b>Ballainvilliers</b><br>29 Rue Ballainvilliers, 63000 Clermont-Ferrand<br><a href="tel:0473905738">04 73 90 57 38</a></p><p><b>Montferrand</b><br>2 Rue Debay Facy, 63000 Clermont-Ferrand<br><a href="tel:0463082410">04 63 08 24 10</a></p><p><b>Horaires :</b> 7j/7 — 10h00 → 01h00</p></div><iframe title="Map" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand&output=embed" loading="lazy"></iframe></section></main><footer><b>L’ÉTOILE CLERMONT</b><span>© Site vitrine premium</span></footer>
-<script src="menu-data.js"></script><script src="script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L’Étoile Clermont-Ferrand | Tacos, Burgers, Sandwichs</title>
+  <meta name="description" content="L’Étoile Clermont-Ferrand — Tacos à composer, burgers, sandwichs, bowls, texmex, desserts et boissons. Commande en ligne, adresses et contacts." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar" id="topbar">
+    <a href="#home" class="brand"><img src="assets/logo.png" alt="L’Étoile Clermont logo"><span>L’Étoile</span></a>
+    <button class="hamb" id="hamb" aria-label="Ouvrir le menu">☰</button>
+    <nav id="nav">
+      <a href="#home">Accueil</a>
+      <a href="#carte">Carte</a>
+      <a href="#tacos">Tacos</a>
+      <a href="#contact">Contact</a>
+      <a class="order-mini" href="https://www.ubereats.com" target="_blank" rel="noopener">Commander</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-text reveal">
+        <p class="eyebrow">Fast food premium · Clermont-Ferrand</p>
+        <h1>Le goût de l’excellence.</h1>
+        <p class="lead">Tacos à composer, burgers, sandwichs, bowls, texmex, desserts et boissons. Une carte complète, claire et prête pour commander.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://www.ubereats.com" target="_blank" rel="noopener">Commander maintenant</a>
+          <a class="btn ghost" href="#carte">Voir la carte</a>
+        </div>
+      </div>
+      <div class="hero-art reveal"><img src="assets/hero-food.png" alt="Mix burgers tacos frites"></div>
+    </section>
+
+    <section class="quick-info">
+      <div><strong>Ouvert 7j/7</strong><span>10h00 → 01h00</span></div>
+      <div><strong>2 adresses</strong><span>Ballainvilliers & Montferrand</span></div>
+      <div><strong>Commande</strong><span>Uber Eats · téléphone</span></div>
+    </section>
+
+    <section class="section" id="carte">
+      <div class="section-head reveal">
+        <p class="eyebrow">Notre carte</p>
+        <h2>Menu complet</h2>
+        <p>Recherche, filtre par catégorie, prix et images locales qui fonctionnent sur GitHub/Netlify.</p>
+      </div>
+      <div class="controls reveal">
+        <input id="search" type="search" placeholder="Chercher un produit..." />
+        <div class="tabs" id="tabs"></div>
+      </div>
+      <div id="menu-grid" class="menu-grid"></div>
+    </section>
+
+    <section class="section dark-card" id="tacos">
+      <div class="section-head reveal">
+        <p class="eyebrow">Tacos à composer</p>
+        <h2>Compose ton tacos</h2>
+        <p>Sauce fromagère, frites ou crudités, salade, tomates, oignons, 2 sauces au choix.</p>
+      </div>
+      <div class="build-grid reveal">
+        <div><h3>Tailles</h3><ul id="sizes"></ul></div>
+        <div><h3>Viandes</h3><ul class="chips" id="meats"></ul></div>
+        <div><h3>Sauces</h3><ul class="chips" id="sauces"></ul></div>
+        <div><h3>Suppléments</h3><ul id="extras"></ul></div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-head reveal">
+        <p class="eyebrow">Galerie</p>
+        <h2>Images produits</h2>
+      </div>
+      <div class="gallery reveal">
+        <img src="assets/burger-double.jpg" alt="Burger double">
+        <img src="assets/tacos-spicy.jpg" alt="Tacos spicy">
+        <img src="assets/sandwich.jpg" alt="Sandwich">
+        <img src="assets/bowl.jpg" alt="Bowl">
+        <img src="assets/texmex.jpg" alt="Texmex">
+        <img src="assets/dessert.jpg" alt="Dessert">
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-head reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Nous trouver</h2>
+      </div>
+      <div class="contact-grid reveal">
+        <article class="contact-card">
+          <h3>L’ÉTOILE – BALLAINVILLIERS</h3>
+          <p>29 Rue Ballainvilliers, 63000 Clermont-Ferrand</p>
+          <a href="tel:0473905738">04.73.90.57.38</a>
+          <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand">Ouvrir Google Maps</a>
+        </article>
+        <article class="contact-card">
+          <h3>L’ÉTOILE – MONTFERRAND</h3>
+          <p>2 Rue Debay Facy, 63000 Clermont-Ferrand</p>
+          <a href="tel:0463082410">04.63.08.24.10</a>
+          <a class="map" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=2%20Rue%20Debay%20Facy%2063000%20Clermont-Ferrand">Ouvrir Google Maps</a>
+        </article>
+      </div>
+      <iframe class="maps" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand&output=embed" loading="lazy" title="Carte L'Étoile Clermont"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo.png" alt="Logo">
+    <p>© 2026 L’Étoile Clermont — Site vitrine restaurant premium.</p>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
