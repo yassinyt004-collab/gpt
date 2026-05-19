@@ -1,16 +1,12 @@
-# L'Étoile Clermont — Site premium
+# L’Étoile Clermont Premium V4 - Local Images Fix
 
-Site React/Vite prêt pour GitHub + Netlify/Vercel.
+This version fixes missing images by bundling every product image locally under `assets/products/`.
 
-## Utilisation
-```bash
-npm install
-npm run dev
-```
+Upload all extracted files to GitHub/Netlify. Do not upload only the ZIP.
 
-## Build
-```bash
-npm run build
-```
-
-Images: stock images via Unsplash Source, non officielles, différentes par produit. Remplace facilement les URLs dans `src/main.jsx` par les vraies photos du restaurant si tu as l'autorisation.
+Main files:
+- index.html
+- style.css
+- script.js
+- menu-data.js
+- assets/
