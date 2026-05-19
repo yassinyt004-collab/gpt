@@ -1,106 +1,97 @@
-const MENU = [
-{cat:'Tacos à composer', items:[
-{name:'Simple Taille M',desc:'1 galette, 1 viande, sauce fromagère, frites ou crudités',price:'8.00€',img:'tacos-m.svg'},
-{name:'Maxi Taille L',desc:'2 galettes, 2 viandes, sauce fromagère, 2 sauces',price:'12.00€',img:'tacos-l.svg'},
-{name:'Mega Taille XL',desc:'3 galettes, 3 viandes, tacos généreux',price:'15.00€',img:'tacos-xl.svg'},
-{name:'Giga Taille XXL',desc:'4 galettes, 4 viandes, format extrême',price:'18.00€',img:'tacos-xxl.svg'},
-{name:'Supplément Fromages',desc:'Ajout fromage au choix',price:'+1.00€',img:'cheese.svg'},
-{name:'Supplément Légumes',desc:'Salade, tomates, oignons',price:'+1.00€',img:'veggie.svg'},
-{name:'Option Gratinages',desc:'Gratinage premium',price:'+2.00€',img:'gratin.svg'},
-{name:'Frites',desc:'Option frites',price:'+1.00€',img:'fries.svg'},
-{name:'Canette',desc:'Boisson 33cl',price:'+1.50€',img:'drink.svg'}]},
-{cat:'Viandes & Sauces', items:[
-{name:'Viandes au choix',desc:'Tenders, Cordon Bleu, Kefta, Viande hachée, Kebab, Steak, Nuggets, Falafel, Chicken, Merguez, Poulet pané',price:'',img:'meat.svg'},
-{name:'Sauces au choix',desc:'Ketchup, Mayonnaise, Blanche, Harissa, Algérienne, Samourai, Biggy burger, Chili thaï, Curry, Tartare, Andalouse, Barbecue, Poivre',price:'',img:'sauce.svg'}]},
-{cat:'Tacos Signatures', items:[
-{name:'O’Majestik',desc:'Sauce fromagère, poulet curry, mozza, boursin, chakchouka',price:'10.00€',img:'signature1.svg'},
-{name:'O’Thentik',desc:'Steak, tomates, oignons grillés, poivrons, œuf, emmental, frites',price:'12.00€',img:'signature2.svg'},
-{name:'O’Chèvre Miel',desc:'Kebab, chèvre miel, sauce fromagère',price:'10.00€',img:'signature3.svg'},
-{name:'O’Spicy',desc:'Viande hachée, onion rings, oignons frits, reblochon, chakchouka',price:'12.00€',img:'signature4.svg'},
-{name:'O’Xford',desc:'Steak, mozza, rostie, sauce fromagère',price:'10.00€',img:'signature5.svg'},
-{name:'O’Rientale',desc:'Merguez, kefta, olives, poivrons, mozza, chakchouka',price:'12.00€',img:'signature6.svg'},
-{name:'Montagnard',desc:'Viande au choix, lardons, oignons frits, mozza, reblochon',price:'10.00€',img:'signature7.svg'},
-{name:'O’Vergnat',desc:'Tenders, nuggets, bleu, rostie, frites',price:'12.00€',img:'signature8.svg'},
-{name:'O’Riginal',desc:'Cordon bleu, poulet pané, oignons frits, raclette',price:'12.00€',img:'signature9.svg'},
-{name:'Végétarien',desc:'Galette pomme de terre, œuf, falafel, frites',price:'8.00€',img:'signature10.svg'}]},
-{cat:'Tacos Sucrés', items:[
-{name:'Tacos Nutella',desc:'Tacos dessert chocolaté',price:'4.00€',img:'sweet1.svg'},
-{name:'Tacos Kinder Bueno',desc:'Kinder Bueno fondant',price:'5.50€',img:'sweet2.svg'},
-{name:'Tacos Kit Kat',desc:'Kit Kat croustillant',price:'5.50€',img:'sweet3.svg'},
-{name:'Tacos MM’s Nutella',desc:'Nutella + MM’s',price:'5.50€',img:'sweet4.svg'}]},
-{cat:'Burgers', items:[
-{name:'Veggie',desc:'Rostie, cheddar, salade, tomate, oignon',price:'5.00€',img:'burger-veggie.svg'},
-{name:'Chick’n',desc:'Chicken pané, cheddar, salade, tomate, oignon',price:'5.00€',img:'burger-chicken.svg'},
-{name:'Cheese',desc:'Steak, cheddar, salade, tomate, oignon',price:'5.00€',img:'burger-cheese.svg'},
-{name:'Double Cheese',desc:'2 steaks, 2 cheddars, salade, tomate, oignon',price:'6.50€',img:'burger-double.svg'},
-{name:'Chèvre Miel',desc:'Steak, chèvre, miel, salade, tomate, oignon',price:'7.00€',img:'burger-chevre.svg'},
-{name:'Baps',desc:'Steak, 2 cheddars, rostie, salade, tomate, oignon',price:'7.00€',img:'burger-baps.svg'},
-{name:'Supreme',desc:'Steak, poulet pané, 2 cheddars, salade, tomate, oignon',price:'7.00€',img:'burger-supreme.svg'},
-{name:'Mac',desc:'Cordon bleu, bacon, cheddar, salade, tomate, oignon',price:'7.50€',img:'burger-mac.svg'},
-{name:'Triple Cheese',desc:'3 steaks, 3 cheddars, salade, tomate, oignon',price:'8.00€',img:'burger-triple.svg'},
-{name:'King',desc:'Steak, bacon, œuf, 2 cheddars, salade, tomate, oignon',price:'8.00€',img:'burger-king.svg'},
-{name:'PSG',desc:'Steak, poulet pané, oignon, 3 cheddars, rostie',price:'8.00€',img:'burger-psg.svg'},
-{name:'Royal Bacon',desc:'Steak 100g, bacon, cornichons, oignons frits, 2 cheddar',price:'7.00€',img:'burger-bacon.svg'},
-{name:'Double Cheese Bacon',desc:'2 steaks 100g, 2 cheddar, cornichons, 2 bacon',price:'8.00€',img:'burger-dcb.svg'}]},
-{cat:'Sandwichs', items:[
-{name:'Nugget’s',desc:'Pain maison ou galette, crudités, 2 sauces',price:'7.00€',img:'sandwich1.svg'},
-{name:'Kebab',desc:'Pain maison ou galette, crudités, 2 sauces',price:'7.00€',img:'sandwich2.svg'},
-{name:'Viande hachée',desc:'Pain maison ou galette, crudités, 2 sauces',price:'7.00€',img:'sandwich3.svg'},
-{name:'Chicken',desc:'Pain maison ou galette, crudités, 2 sauces',price:'7.00€',img:'sandwich4.svg'},
-{name:'Tenders',desc:'Pain maison ou galette, crudités, 2 sauces',price:'7.00€',img:'sandwich5.svg'},
-{name:'O’Bama',desc:'Sandwich signature',price:'9.00€',img:'sandwich6.svg'},
-{name:'Cowboy',desc:'Sandwich signature',price:'9.00€',img:'sandwich7.svg'},
-{name:'Radical',desc:'Sandwich signature premium',price:'11.00€',img:'sandwich8.svg'}]},
-{cat:'Bowls', items:[
-{name:'Compose ton Bowl 1 viande',desc:'Frites + sauce fromagère + gratiné mozza + 2 sauces',price:'8.00€',img:'bowl1.svg'},
-{name:'Compose ton Bowl 2 viandes',desc:'Frites + sauce fromagère + gratiné mozza + 2 sauces',price:'10.00€',img:'bowl2.svg'},
-{name:'Indy Bowl',desc:'Bowl signature',price:'11.00€',img:'bowl3.svg'},
-{name:'Spicy Bowl',desc:'Bowl signature épicé',price:'11.00€',img:'bowl4.svg'},
-{name:'Super Bowl',desc:'Grand bowl signature',price:'15.00€',img:'bowl5.svg'},
-{name:'Big Bowl',desc:'Bowl extra gourmand',price:'15.00€',img:'bowl6.svg'}]},
-{cat:'Menus & Box', items:[
-{name:'Menu Duo',desc:'Sandwich kebab + cheese + frites + boisson 33cl',price:'13.90€',img:'menu1.svg'},
-{name:'Menu Gourmand',desc:'Double cheese + cheese + frites + boisson 33cl',price:'13.90€',img:'menu2.svg'},
-{name:'Menu Enfants',desc:'Cheese ou 5 nuggets + frites + boisson 33cl',price:'6.90€',img:'menu3.svg'},
-{name:'Menu Tenders',desc:'6 tenders + frites + boisson 33cl',price:'8.90€',img:'menu4.svg'},
-{name:'Menu Wings',desc:'6 wings + frites + boisson 33cl',price:'8.90€',img:'menu5.svg'},
-{name:'Menu Étudiant',desc:'Menu économique',price:'6.90€',img:'menu6.svg'},
-{name:'Box 1',desc:'Box à partager',price:'23.00€',img:'box1.svg'},
-{name:'Box 2',desc:'Box à partager',price:'27.00€',img:'box2.svg'},
-{name:'Box 3',desc:'Box à partager',price:'27.00€',img:'box3.svg'},
-{name:'Box 4',desc:'Box familiale',price:'30.00€',img:'box4.svg'}]},
-{cat:'Assiettes & Texmex', items:[
-{name:'Assiette 1 viande',desc:'Kebab, Merguez, Tenders, Cordon Bleu, Steak, Végé, Kefta, Chicken Chika',price:'12.00€',img:'plate1.svg'},
-{name:'Assiette 2 viandes',desc:'Assiette garnie avec 2 viandes',price:'14.00€',img:'plate2.svg'},
-{name:'Assiette 3 viandes',desc:'Assiette complète avec 3 viandes',price:'16.00€',img:'plate3.svg'},
-{name:'Tenders x6',desc:'Pièces croustillantes',price:'5.50€',img:'tex1.svg'},
-{name:'Onion rings x8',desc:'Rings dorés',price:'6.90€',img:'tex2.svg'},
-{name:'Nugget’s x10',desc:'Nuggets croustillants',price:'7.90€',img:'tex3.svg'},
-{name:'Wings x6',desc:'Wings épicées',price:'5.50€',img:'tex4.svg'},
-{name:'Chili Cheese x6',desc:'Bouchées chili cheese',price:'5.90€',img:'tex5.svg'}]},
-{cat:'Paninis & Salades', items:[
-{name:'Panini 3 Fromages',desc:'Panini toasté',price:'7.00€',img:'panini1.svg'},
-{name:'Panini Chicken',desc:'Panini toasté chicken',price:'7.00€',img:'panini2.svg'},
-{name:'Panini Kebab',desc:'Panini toasté kebab',price:'7.00€',img:'panini3.svg'},
-{name:'Panini Steak',desc:'Panini toasté steak',price:'7.00€',img:'panini4.svg'},
-{name:'Salade O’Chèvre Miel',desc:'Salade fraîche et gourmande',price:'7.50€',img:'salad1.svg'},
-{name:'Salade O’Rings',desc:'Salade avec onion rings',price:'7.50€',img:'salad2.svg'},
-{name:'Salade O’Camembert',desc:'Salade camembert',price:'7.50€',img:'salad3.svg'}]},
-{cat:'Frites & Barquettes', items:[
-{name:'Frites Cheddar Bacon',desc:'Frites + cheddar + bacon',price:'4.00€',img:'fries1.svg'},
-{name:'Frites Fromagère',desc:'Frites sauce fromagère',price:'3.50€',img:'fries2.svg'},
-{name:'Frites petite/moyenne/grande',desc:'2.50€ / 3.00€ / 3.50€',price:'2.50€+',img:'fries3.svg'},
-{name:'Barquette Chicken Tikka Curry',desc:'Barquette chaude',price:'8.00€',img:'barq1.svg'},
-{name:'Barquette Kebab',desc:'Barquette kebab',price:'8.00€',img:'barq2.svg'},
-{name:'Nuggets Cheddar Onions Crispy',desc:'Barquette gourmande',price:'7.00€',img:'barq3.svg'}]},
-{cat:'Desserts & Boissons', items:[
-{name:'Burger O’ Nutella',desc:'Dessert signature',price:'2.00€',img:'dessert1.svg'},
-{name:'Cheesecake Cookie',desc:'Dessert frais',price:'3.50€',img:'dessert2.svg'},
-{name:'Tarte Daim',desc:'Dessert gourmand',price:'3.50€',img:'dessert3.svg'},
-{name:'Tiramisu Chocolat Noisette',desc:'Tiramisu gourmand',price:'3.50€',img:'dessert4.svg'},
-{name:'Coca 33cl',desc:'Boisson fraîche',price:'1.80€',img:'drink1.svg'},
-{name:'Cristalline 50cl',desc:'Eau minérale',price:'1.50€',img:'drink2.svg'},
-{name:'Monster 50cl',desc:'Energy drink',price:'3.00€',img:'drink3.svg'},
-{name:'Coca 1.25L',desc:'Format familial',price:'3.50€',img:'drink4.svg'}]}
+const UNSPLASH = {
+  burger1: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85',
+  burger2: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85',
+  burger3: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=900&q=85',
+  burger4: 'https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=85',
+  tacos1: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=85',
+  tacos2: 'https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=900&q=85',
+  tacos3: 'https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=85',
+  fries: 'https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85',
+  sandwich: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=85',
+  bowl: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85',
+  texmex: 'https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?auto=format&fit=crop&w=900&q=85',
+  dessert: 'https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=900&q=85',
+  drink: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85',
+  panini: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=900&q=85',
+  salad: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=85'
+};
+
+const menuData = [
+  { category: 'Nos Croustiz', items: [
+    ['L’Original','Croustiz généreux, croustillant et sauce maison.','9.00€', UNSPLASH.texmex],
+    ['Le Spicy','Version relevée avec notes épicées.','9.00€', UNSPLASH.tacos2],
+    ['Le Curry','Saveur curry, croustillant et fondant.','9.00€', UNSPLASH.fries]
+  ]},
+  { category: 'Tacos à composer', items: [
+    ['Simple Taille M','1 galette, 1 viande, sauce fromagère.','8.00€', UNSPLASH.tacos1],
+    ['Maxi Taille L','2 galettes, 2 viandes, sauce fromagère.','12.00€', UNSPLASH.tacos2],
+    ['Mega Taille XL','3 galettes, 3 viandes, sauce fromagère.','15.00€', UNSPLASH.tacos3],
+    ['Giga Taille XXL','4 galettes, 4 viandes, sauce fromagère.','18.00€', UNSPLASH.tacos1]
+  ]},
+  { category: 'Tacos Signatures', items: [
+    ['O’Majestik','Signature généreuse maison.','10.00€', UNSPLASH.tacos1],
+    ['O’Thentik','Goût intense et recette gourmande.','12.00€', UNSPLASH.tacos2],
+    ['O’Chèvre Miel','Chèvre, miel, fondant et gourmand.','10.00€', UNSPLASH.tacos3],
+    ['O’Spicy','Recette relevée et généreuse.','12.00€', UNSPLASH.tacos2],
+    ['O’Xford','Signature premium façon maison.','10.00€', UNSPLASH.tacos1],
+    ['O’Rientale','Saveurs orientales et viande grillée.','12.00€', UNSPLASH.tacos3],
+    ['Montagnard','Fromage, gourmandise et caractère.','10.00€', UNSPLASH.tacos1],
+    ['O’Vergnat','Recette riche et généreuse.','12.00€', UNSPLASH.tacos2],
+    ['O’Riginal','La signature classique L’Étoile.','12.00€', UNSPLASH.tacos3],
+    ['Végétarien','Option veggie gourmande.','8.00€', UNSPLASH.bowl]
+  ]},
+  { category: 'Tacos Sucrés', items: [
+    ['Tacos Nutella','Dessert chaud et fondant.','4.00€', UNSPLASH.dessert],
+    ['Tacos Kinder Bueno','Version Kinder Bueno.','5.50€', UNSPLASH.dessert],
+    ['Tacos Kit Kat','Croquant chocolaté.','5.50€', UNSPLASH.dessert],
+    ['Tacos MM’s Nutella','Nutella + MM’s.','5.50€', UNSPLASH.dessert]
+  ]},
+  { category: 'Burgers', items: [
+    ['Veggie','Rostie, cheddar, salade, tomate, oignon.','5.00€', UNSPLASH.burger1],
+    ['Chick’n','Chicken pané, cheddar, salade, tomate, oignon.','5.00€', UNSPLASH.burger2],
+    ['Cheese','Steak, cheddar, salade, tomate, oignon.','5.00€', UNSPLASH.burger3],
+    ['Double Cheese','2 steaks, 2 cheddars, salade, tomate, oignon.','6.50€', UNSPLASH.burger4],
+    ['Chèvre Miel','Chèvre, miel, steak et crudités.','7.00€', UNSPLASH.burger1],
+    ['Baps','Burger généreux maison.','7.00€', UNSPLASH.burger2],
+    ['Supreme','Burger premium et sauce signature.','7.00€', UNSPLASH.burger3],
+    ['Mac','Double étage, sauce gourmande.','7.50€', UNSPLASH.burger4],
+    ['Triple Cheese','3 steaks, cheddar fondant.','8.00€', UNSPLASH.burger3],
+    ['King','Burger généreux premium.','8.00€', UNSPLASH.burger2],
+    ['PSG','Burger signature maison.','8.00€', UNSPLASH.burger1],
+    ['Royal Bacon','Bacon, steak, cheddar.','7.00€', UNSPLASH.burger4],
+    ['Double Cheese Bacon','Double steak, cheddar, bacon.','8.00€', UNSPLASH.burger3]
+  ]},
+  { category: 'Sandwichs Classiques', items: [
+    ['Nugget’s','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich],
+    ['Kebab','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich],
+    ['Viande hachée','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich],
+    ['Chicken','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich],
+    ['Tenders','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich],
+    ['Cordon Bleu','Pain maison ou galette, crudités, 2 sauces.','7.00€', UNSPLASH.sandwich]
+  ]},
+  { category: 'Sandwichs Signatures', items: [
+    ['O’Bama','Signature généreuse.','9.00€', UNSPLASH.sandwich], ['Panam','Signature maison.','9.00€', UNSPLASH.sandwich], ['Cowboy','Recette caractère.','9.00€', UNSPLASH.sandwich], ['Veggie Lover','Signature végétarienne.','9.00€', UNSPLASH.bowl], ['Ideal','Recette équilibrée.','9.00€', UNSPLASH.sandwich], ['Zlatan','Sandwich premium.','9.00€', UNSPLASH.sandwich], ['Turbo','Intense et généreux.','9.00€', UNSPLASH.sandwich], ['Radical','Format gourmand.','11.00€', UNSPLASH.sandwich], ['Magistral','Maxi signature.','11.00€', UNSPLASH.sandwich]
+  ]},
+  { category: 'Bowls', items: [
+    ['Compose ton Bowl 1 viande','Frites, sauce fromagère, gratiné mozza.','8.00€', UNSPLASH.bowl],
+    ['Compose ton Bowl 2 viandes','Frites, sauce fromagère, gratiné mozza.','10.00€', UNSPLASH.bowl],
+    ['Indy Bowl','Bowl signature.','11.00€', UNSPLASH.bowl],
+    ['Spicy Bowl','Bowl relevé.','11.00€', UNSPLASH.bowl],
+    ['Super Bowl','Version ultra généreuse.','15.00€', UNSPLASH.bowl],
+    ['Cheese Bowl','Cheese lover.','12.00€', UNSPLASH.bowl],
+    ['Big Bowl','Maxi bowl.','15.00€', UNSPLASH.bowl],
+    ['Box Bowl','Format pratique.','8.00€', UNSPLASH.bowl]
+  ]},
+  { category: 'Menus & Box', items: [
+    ['Menu Duo','Menu pour deux.','13.90€', UNSPLASH.burger2], ['Menu Gourmand','Menu généreux.','13.90€', UNSPLASH.tacos2], ['Menu Enfants','Menu enfant.','6.90€', UNSPLASH.fries], ['Menu Tenders','Tenders + accompagnement.','8.90€', UNSPLASH.texmex], ['Menu Wings','Wings + accompagnement.','8.90€', UNSPLASH.texmex], ['Menu Étudiant','Petit prix.','6.90€', UNSPLASH.burger1], ['Box 1','Box à partager.','23.00€', UNSPLASH.texmex], ['Box 2','Box généreuse.','27.00€', UNSPLASH.texmex], ['Box 3','Box premium.','27.00€', UNSPLASH.texmex], ['Box 4','Grande box.','30.00€', UNSPLASH.texmex]
+  ]},
+  { category: 'Assiettes & Texmex', items: [
+    ['Assiette 1 viande','Kebab, merguez, tenders, steak ou chicken.','12.00€', UNSPLASH.texmex], ['Assiette 2 viandes','Assiette double viandes.','14.00€', UNSPLASH.texmex], ['Assiette 3 viandes','Assiette triple viandes.','16.00€', UNSPLASH.texmex], ['Tenders x6','Tenders croustillants.','5.50€', UNSPLASH.texmex], ['Onion rings x8','Onion rings dorés.','6.90€', UNSPLASH.fries], ['Sticks Mozza x6','Mozzarella fondante.','5.50€', UNSPLASH.texmex], ['Nugget’s x10','Nuggets croustillants.','7.90€', UNSPLASH.texmex], ['Wings x6','Wings croustillantes.','5.50€', UNSPLASH.texmex]
+  ]},
+  { category: 'Paninis / Salades / Frites', items: [
+    ['Panini 3 Fromages','Panini chaud.','7.00€', UNSPLASH.panini], ['Panini Chicken','Panini chicken.','7.00€', UNSPLASH.panini], ['Panini Kebab','Panini kebab.','7.00€', UNSPLASH.panini], ['Salade O’Chèvre Miel','Salade fraîche.','7.50€', UNSPLASH.salad], ['Salade O’Rings','Salade croustillante.','7.50€', UNSPLASH.salad], ['Frites Cheddar Bacon','Frites gourmandes.','4.00€', UNSPLASH.fries], ['Frites Fromagère','Frites + sauce fromagère.','3.50€', UNSPLASH.fries], ['Frites Petite/Moyenne/Grande','2.50€ / 3.00€ / 3.50€','', UNSPLASH.fries]
+  ]},
+  { category: 'Desserts & Boissons', items: [
+    ['Burger O’ Nutella','Mini dessert gourmand.','2.00€', UNSPLASH.dessert], ['Cheesecake Cookie','Cheesecake cookie.','3.50€', UNSPLASH.dessert], ['Cheesecake Citron','Cheesecake citron.','3.50€', UNSPLASH.dessert], ['Tarte Daim','Dessert Daim.','3.50€', UNSPLASH.dessert], ['Tiramisu Chocolat Noisette','Tiramisu gourmand.','3.50€', UNSPLASH.dessert], ['Canette 33cl','Coca, Fanta, Sprite, Oasis, etc.','1.80€', UNSPLASH.drink], ['Cristalline 50cl','Eau minérale.','1.50€', UNSPLASH.drink], ['Monster 50cl','Boisson énergisante.','3.00€', UNSPLASH.drink], ['Coca 1.25L','Grand format.','3.50€', UNSPLASH.drink]
+  ]}
 ];
-const FEATURED = ['O’Majestik','Double Cheese','Menu Duo','Spicy Bowl','Tenders x6','Tiramisu Chocolat Noisette'];
