@@ -1,8 +1,8 @@
-# L’Étoile Clermont — Logo Code Fix
+# L'Étoile Clermont — Logo Pro Black Sides
 
-This version fixes the logo issue in code:
-- logo is displayed inside a clean white card so black logo details do not disappear on the black navbar
-- navbar logo size is controlled
-- footer logo fixed
-- spacing between big titles/text improved
-- menu remains on menu.html
+This version fixes the navbar logo:
+- larger logo
+- black sides around the logo
+- small light center only behind the logo so black details remain visible
+- no huge white rectangle
+- spacing kept clean
