@@ -17,3 +17,151 @@
 .lead{margin-top:42px;margin-bottom:0;max-width:620px;font-size:22px;line-height:1.65;color:#f4f4f4;font-weight:700;letter-spacing:.1px}
 .actions{margin-top:46px;gap:20px}.btn{padding:17px 30px}.quality-row{margin-top:0}
 @media (max-width:900px){.site-header{height:78px}.brand img{height:56px;max-width:170px}.hero{padding:125px 6vw 80px;background-position:63% center}.hero-content{padding-top:0}.kicker{font-size:12px;letter-spacing:5px;margin-bottom:24px}.hero h1{font-size:clamp(48px,16vw,78px);line-height:1.03}.hero h1 span{margin-top:8px}.lead{font-size:17px;line-height:1.6;margin-top:28px;max-width:92%}.actions{margin-top:32px}}
+
+
+
+/* ===== FINAL FIX: logo visible, footer not crowded, menu separated ===== */
+.site-header{
+  height:82px !important;
+  padding:0 5vw !important;
+  background:rgba(0,0,0,.86) !important;
+}
+.brand{
+  height:82px;
+  display:flex;
+  align-items:center;
+  min-width:190px;
+}
+.brand img{
+  height:64px !important;
+  width:auto !important;
+  max-width:210px !important;
+  object-fit:contain !important;
+  filter:drop-shadow(0 0 12px rgba(255,176,0,.32)) !important;
+}
+
+.hero{
+  padding-top:132px !important;
+  min-height:100vh;
+}
+.hero-content{
+  max-width:760px;
+}
+.kicker{
+  margin-bottom:28px !important;
+  line-height:1.7 !important;
+}
+.hero h1{
+  line-height:1.02 !important;
+  letter-spacing:1px;
+  margin-bottom:0 !important;
+}
+.hero h1 span{
+  display:block;
+  margin-top:14px !important;
+}
+.lead{
+  margin-top:46px !important;
+  max-width:640px;
+  line-height:1.7 !important;
+}
+.actions{
+  margin-top:42px !important;
+}
+
+/* Map section clean: prevent logo/map overlap feeling */
+.maps{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:stretch;
+}
+.map-card{
+  overflow:hidden;
+  border-radius:28px;
+  border:1px solid var(--line);
+  background:#090504;
+}
+.map-card iframe{
+  width:100%;
+  min-height:360px;
+  display:block;
+  border:0;
+  filter:grayscale(1) invert(.88) contrast(1.05);
+}
+
+/* Footer logo was too visually noisy on mobile; keep it elegant */
+footer{
+  padding:48px 5vw !important;
+  gap:22px !important;
+  border-top:1px solid var(--line);
+  background:#030303 !important;
+}
+footer img,
+footer .footer-logo{
+  height:54px !important;
+  max-width:170px !important;
+  width:auto !important;
+  object-fit:contain !important;
+  opacity:.95;
+}
+footer p{
+  color:#d6d6d6;
+  margin:0;
+}
+
+/* Menu page header spacing */
+.menu-page .site-header .brand img{
+  height:64px !important;
+}
+
+/* Mobile fixes */
+@media(max-width:900px){
+  .site-header{
+    height:74px !important;
+    padding:0 20px !important;
+  }
+  .brand{
+    height:74px;
+    min-width:auto;
+  }
+  .brand img{
+    height:50px !important;
+    max-width:155px !important;
+  }
+  .main-nav{
+    top:74px !important;
+  }
+  .hero{
+    padding-top:112px !important;
+  }
+  .maps{
+    grid-template-columns:1fr;
+  }
+  .map-card iframe{
+    min-height:310px;
+  }
+}
+
+@media(max-width:560px){
+  .brand img{
+    height:46px !important;
+    max-width:142px !important;
+  }
+  .hero h1{
+    font-size:clamp(45px,15vw,66px) !important;
+  }
+  .lead{
+    margin-top:30px !important;
+    font-size:16px !important;
+    line-height:1.65 !important;
+  }
+  footer{
+    padding:42px 20px !important;
+  }
+  footer img,
+  footer .footer-logo{
+    height:46px !important;
+    max-width:145px !important;
+  }
+}
