@@ -1,22 +1,16 @@
-# L’Étoile Clermont — Premium Restaurant Website
+# L'Étoile Clermont — Site premium
 
-Site statique prêt pour GitHub / Netlify.
+Site React/Vite prêt pour GitHub + Netlify/Vercel.
 
-## Fichiers
-- `index.html` — structure + SEO + schema Restaurant
-- `styles.css` — design premium dark/red responsive
-- `app.js` — menu/data/images/filters/search
+## Utilisation
+```bash
+npm install
+npm run dev
+```
 
-## Important
-Les images sont des placeholders Unsplash. Remplace les URLs dans `app.js` par les vraies photos produits.
+## Build
+```bash
+npm run build
+```
 
-## Déploiement GitHub
-1. Créer un repo GitHub
-2. Uploader ces fichiers à la racine
-3. Netlify: Add new site → Import from GitHub → Deploy
-
-## Modifier le menu
-Tout est dans `app.js`, tableau `menu`. Change `name`, `desc`, `price`, `image`.
-
-
-Update: images officielles ajoutées via URLs du site letoile-clermont.com (hero, burgers, texmex, sandwichs, tacos/frites).
+Images: stock images via Unsplash Source, non officielles, différentes par produit. Remplace facilement les URLs dans `src/main.jsx` par les vraies photos du restaurant si tu as l'autorisation.
