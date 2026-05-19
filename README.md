@@ -1,8 +1,8 @@
-# L'Étoile Clermont — version propre
+# L’Étoile Clermont — Clean hero + official logo
 
-- `index.html` = page d'accueil sans menu complet, plus clean.
-- `menu.html` = page séparée pour la carte complète.
-- `assets/hero-bg.png` = background principal.
-- `assets/logo-white.svg` = logo optimisé pour fond noir.
+- Logo replaced with the requested white/orange version (`assets/logo-official.png`).
+- Hero uses the clean food background.
+- Text spacing improved so the title/description are not crowded.
+- Menu is separated in `menu.html`, not overloaded on the homepage.
 
-Déploiement : uploader tout le contenu du dossier sur GitHub/Netlify/Vercel.
+Upload all files and the `assets/` folder to GitHub/Netlify.
