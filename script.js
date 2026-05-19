@@ -1,10 +1,6 @@
-const grid=document.querySelector('#menu-grid');const tabs=document.querySelector('#tabs');const search=document.querySelector('#search');let current='Tous';
-const categories=['Tous',...menu.map(m=>m.cat)];
-tabs.innerHTML=categories.map(c=>`<button class="tab ${c==='Tous'?'active':''}" data-cat="${c}">${c}</button>`).join('');
-function render(){const q=(search.value||'').toLowerCase().trim();grid.innerHTML='';menu.forEach(section=>{if(current!=='Tous'&&section.cat!==current)return;section.items.forEach(([name,desc,price,img])=>{const txt=(name+' '+desc+' '+section.cat).toLowerCase();if(q&&!txt.includes(q))return;grid.insertAdjacentHTML('beforeend',`<article class="card reveal show"><div class="card-img"><img src="${img}" alt="${name}" loading="lazy" onerror="this.src='assets/hero-food.png'"></div><div class="card-body"><span class="tag">${section.cat}</span><h3>${name}</h3><p class="desc">${desc||'Produit de la carte L’Étoile Clermont.'}</p><div class="card-foot"><strong class="price">${price||'Voir choix'}</strong><a class="tag" href="https://www.ubereats.com" target="_blank" rel="noopener">Commander</a></div></div></article>`);});});if(!grid.innerHTML)grid.innerHTML='<p>Aucun produit trouvé.</p>'}
-tabs.addEventListener('click',e=>{if(!e.target.matches('.tab'))return;document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));e.target.classList.add('active');current=e.target.dataset.cat;render();});search.addEventListener('input',render);render();
-function fillList(id,items,type='normal'){document.querySelector(id).innerHTML=items.map(x=>Array.isArray(x)?`<li><strong>${x[0]}</strong> — ${x.slice(1).join(' · ')}</li>`:`<li>${x}</li>`).join('')}
-fillList('#sizes',tacosComposer.sizes);fillList('#meats',tacosComposer.meats);fillList('#sauces',tacosComposer.sauces);fillList('#extras',tacosComposer.extras);
-document.querySelector('#hamb').addEventListener('click',()=>document.querySelector('#nav').classList.toggle('open'));
-const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-window.addEventListener('scroll',()=>document.querySelector('#topbar').style.background=scrollY>40?'rgba(5,5,5,.9)':'rgba(5,5,5,.65)');
+const grid=document.querySelector('#menuGrid'),tabs=document.querySelector('#tabs');let active='Tous';
+function cats(){return ['Tous',...MENU.map(c=>c.cat)]}
+function renderTabs(){tabs.innerHTML=cats().map(c=>`<button class="${c===active?'active':''}" onclick="active='${c}';render()">${c}</button>`).join('')}
+function render(){renderTabs();let data=active==='Tous'?MENU:MENU.filter(c=>c.cat===active);grid.innerHTML=data.flatMap(cat=>cat.items.map((it,i)=>`<article class="card"><div class="pic"><img src="assets/${cat.img}" alt="${it[0]}"><span>${cat.cat}</span></div><div class="body"><h3>${it[0]}</h3><p>${it[1]}</p><div><strong>${it[2]}</strong><a href="tel:0473905738">Commander</a></div></div></article>`)).join('')}
+render();
+document.querySelector('.hamb').onclick=()=>document.querySelector('.nav nav').classList.toggle('open');
