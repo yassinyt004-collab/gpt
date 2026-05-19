@@ -1,6 +1,8 @@
-# L’Étoile Clermont — Final Clean Version
+# L’Étoile Clermont — Logo Code Fix
 
-Upload all files/folders:
-index.html, menu.html, style.css, script.js, menu-data.js, assets/
-
-Menu is in menu.html. Logo clipping and title spacing are fixed.
+This version fixes the logo issue in code:
+- logo is displayed inside a clean white card so black logo details do not disappear on the black navbar
+- navbar logo size is controlled
+- footer logo fixed
+- spacing between big titles/text improved
+- menu remains on menu.html
