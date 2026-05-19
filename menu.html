@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte — L’Étoile Clermont</title>
+  <meta name="description" content="Carte complète L’Étoile Clermont : tacos à composer, tacos signatures, burgers, sandwichs, bowls, menus, texmex, desserts et boissons." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="menu-page">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil L'Étoile Clermont">
+      <img src="assets/logo-white.svg" alt="L'Étoile Clermont" />
+    </a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <a href="index.html">Accueil</a>
+      <a href="menu.html" class="active">Carte</a>
+      <a href="index.html#best">Best Sellers</a>
+      <a href="index.html#galerie">Galerie</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="tel:0473905738" class="btn nav-btn">Commander</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="menu-hero">
+      <div class="menu-hero-bg"></div>
+      <div class="section-head reveal">
+        <p>Carte complète</p>
+        <h1>Menu L’Étoile Clermont</h1>
+        <span>Produits organisés par catégories. Clique sur une catégorie pour filtrer rapidement.</span>
+      </div>
+    </section>
+
+    <section class="section menu-zone">
+      <div class="filters reveal" id="filters"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <img src="assets/logo-white.svg" alt="L'Étoile Clermont" />
+    <p>© L’Étoile Clermont — carte complète.</p>
+    <a href="index.html">Retour accueil</a>
+  </footer>
+
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

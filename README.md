@@ -1,13 +1,8 @@
-# L'Étoile Clermont — Unsplash Ultra Premium
+# L'Étoile Clermont — version propre
 
-Static website ready for GitHub/Netlify.
+- `index.html` = page d'accueil sans menu complet, plus clean.
+- `menu.html` = page séparée pour la carte complète.
+- `assets/hero-bg.png` = background principal.
+- `assets/logo-white.svg` = logo optimisé pour fond noir.
 
-## Upload
-Upload all files and folders:
-- index.html
-- style.css
-- script.js
-- menu-data.js
-- assets/
-
-Images for menu/gallery use direct Unsplash CDN URLs. Hero and logo are local in assets.
+Déploiement : uploader tout le contenu du dossier sur GitHub/Netlify/Vercel.

@@ -1,26 +1,58 @@
-const grid = document.getElementById('menuGrid');
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('.main-nav');
+if (toggle && nav) toggle.addEventListener('click', () => nav.classList.toggle('open'));
+
+document.querySelectorAll('.main-nav a').forEach(a => a.addEventListener('click', () => nav?.classList.remove('open')));
+
+const reveals = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('show'); });
+}, { threshold: 0.12 });
+reveals.forEach(el => io.observe(el));
+
 const filters = document.getElementById('filters');
-let current = 'All';
+const grid = document.getElementById('menuGrid');
 
-function renderFilters(){
-  const cats = ['All', ...menuData.map(c=>c.category)];
-  filters.innerHTML = cats.map(c => `<button class="${c===current?'active':''}" data-cat="${c}">${c}</button>`).join('');
-  filters.querySelectorAll('button').forEach(btn=>btn.addEventListener('click',()=>{current=btn.dataset.cat;renderFilters();renderMenu();}));
+function renderMenu(category = 'Tout') {
+  if (!grid || !filters || typeof menuData === 'undefined') return;
+  grid.innerHTML = '';
+  const groups = category === 'Tout' ? menuData : menuData.filter(group => group.category === category);
+  groups.forEach(group => {
+    group.items.forEach(item => {
+      const [name, desc, price, image] = item;
+      const card = document.createElement('article');
+      card.className = 'menu-card reveal show';
+      card.innerHTML = `
+        <span class="cat">${group.category}</span>
+        <img src="${image}" alt="${name}" loading="lazy">
+        <div class="body">
+          <h3>${name}</h3>
+          <p>${desc}</p>
+          <div class="price"><span>${price}</span><button class="mini-order" type="button">Commander</button></div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  });
 }
-function renderMenu(){
-  const groups = current==='All'? menuData : menuData.filter(g=>g.category===current);
-  grid.innerHTML = groups.flatMap(g => g.items.map(item => card(g.category,item))).join('');
-}
-function card(cat,item){
-  const [name,desc,price,img] = item;
-  return `<article class="menu-card reveal show">
-    <span class="cat">${cat}</span>
-    <img src="${img}" alt="${name}" loading="lazy" onerror="this.src='assets/hero-banner.png'">
-    <div class="body"><h3>${name}</h3><p>${desc}</p><div class="price"><span>${price}</span><button class="mini-order" onclick="location.href='tel:0473905738'">Commander</button></div></div>
-  </article>`;
-}
-renderFilters();renderMenu();
 
-document.querySelector('.burger').addEventListener('click',()=>document.querySelector('.nav nav').classList.toggle('open'));
-const obs = new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function initFilters() {
+  if (!filters || typeof menuData === 'undefined') return;
+  const categories = ['Tout', ...menuData.map(group => group.category)];
+  filters.innerHTML = '';
+  categories.forEach((cat, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.textContent = cat;
+    if (index === 0) button.classList.add('active');
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      renderMenu(cat);
+    });
+    filters.appendChild(button);
+  });
+  renderMenu('Tout');
+}
+
+initFilters();

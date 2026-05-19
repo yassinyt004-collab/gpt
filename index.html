@@ -3,79 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L’Étoile Clermont-Ferrand — Tacos, Burgers & Sandwichs</title>
-  <meta name="description" content="L’Étoile Clermont-Ferrand : tacos, burgers, sandwichs, bowls, frites maison, menus et box. Site premium responsive." />
+  <title>L’Étoile Clermont — Tacos, Burgers & Sandwichs</title>
+  <meta name="description" content="L’Étoile Clermont-Ferrand : tacos, burgers, sandwichs, bowls, frites maison, menus et box." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <header class="nav">
-    <a class="brand" href="#home"><img src="assets/logo-transparent.png" alt="L'Étoile Clermont"><span>CLERMONT</span></a>
-    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <nav>
-      <a href="#home">Accueil</a><a href="#carte">Carte</a><a href="#best">Best Sellers</a><a href="#galerie">Galerie</a><a href="#contact">Contact</a>
-      <a class="order small" href="tel:0473905738">Commander</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Accueil L'Étoile Clermont">
+      <img src="assets/logo-white.svg" alt="L'Étoile Clermont" />
+    </a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Accueil</a>
+      <a href="menu.html">Carte</a>
+      <a href="#best">Best Sellers</a>
+      <a href="#qualite">Qualité</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#contact">Contact</a>
+      <a href="tel:0473905738" class="btn nav-btn">Commander</a>
     </nav>
   </header>
 
-  <main id="home">
-    <section class="hero hero-clean">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-shade"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow">TACOS • BURGERS • SANDWICHS • FRITES MAISON</p>
-        <h1>LE GOÛT DE <span>L’EXCELLENCE</span></h1>
-        <p class="lead">Des recettes généreuses, des ingrédients sélectionnés et un savoir-faire unique depuis 2010.</p>
-        <div class="hero-actions">
-          <a href="#carte" class="order">Découvrir la carte</a>
-          <a href="tel:0473905738" class="outline">Appeler maintenant</a>
+        <p class="kicker">TACOS • BURGERS • SANDWICHS • FRITES MAISON</p>
+        <h1>Le goût de <span>l’excellence</span></h1>
+        <p class="lead">Des recettes généreuses, des ingrédients sélectionnés et une expérience gourmande pensée pour donner faim dès la première seconde.</p>
+        <div class="actions">
+          <a class="btn" href="menu.html">Voir la carte</a>
+          <a class="btn ghost" href="tel:0473905738">Appeler</a>
         </div>
       </div>
     </section>
 
-    <section class="strip">
-      <div><strong>Viandes de qualité</strong><span>Sélectionnées avec soin</span></div>
-      <div><strong>Frites maison</strong><span>Gourmandes et dorées</span></div>
-      <div><strong>Sauces signature</strong><span>Saveurs uniques</span></div>
-      <div><strong>Recettes originales</strong><span>Créations généreuses</span></div>
+    <section class="quality-row" id="qualite">
+      <article><span>01</span><h3>Viandes de qualité</h3><p>Sélectionnées avec soin pour des recettes généreuses.</p></article>
+      <article><span>02</span><h3>Frites maison</h3><p>Une touche croustillante et dorée dans chaque menu.</p></article>
+      <article><span>03</span><h3>Sauces signature</h3><p>Des saveurs gourmandes pour personnaliser votre repas.</p></article>
+      <article><span>04</span><h3>Qualité garantie</h3><p>Une carte complète, claire et pensée pour commander vite.</p></article>
     </section>
 
-    <section class="section intro">
-      <div class="section-title reveal"><p>Expérience premium</p><h2>Un site visuel, rapide et pensé pour donner faim.</h2></div>
-      <div class="features reveal"><article>🔥 Hero cinematic</article><article>🍔 Produits en cards</article><article>📱 Mobile propre</article><article>📍 Contacts réels</article></div>
-    </section>
-
-    <section id="best" class="section best">
-      <div class="section-title reveal"><p>Best Sellers</p><h2>Les stars de la carte</h2></div>
-      <div class="best-grid reveal">
-        <article><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85" alt="Burger premium"><h3>Double Cheese</h3><span>6.50€</span></article>
-        <article><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=900&q=85" alt="Tacos premium"><h3>O’Thentik</h3><span>12.00€</span></article>
-        <article><img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="Frites cheddar"><h3>Frites Cheddar</h3><span>3.50€</span></article>
+    <section class="section" id="best">
+      <div class="section-head reveal">
+        <p>Best Sellers</p>
+        <h2>Les stars de la maison</h2>
+        <a href="menu.html">Voir toute la carte →</a>
+      </div>
+      <div class="product-grid reveal">
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=85" alt="Double Cheese" />
+          <div><h3>Double Cheese</h3><p>2 steaks, 2 cheddars, salade, tomate, oignon.</p><strong>6.50€</strong></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=1000&q=85" alt="Tacos signature" />
+          <div><h3>O’Thentik</h3><p>Tacos signature généreux, sauce fromagère et viande grillée.</p><strong>12.00€</strong></div>
+        </article>
+        <article class="product-card">
+          <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=1000&q=85" alt="Frites cheddar" />
+          <div><h3>Frites Cheddar</h3><p>Frites gourmandes avec cheddar fondant.</p><strong>3.50€</strong></div>
+        </article>
       </div>
     </section>
 
-    <section id="carte" class="section menu-section">
-      <div class="section-title reveal"><p>Carte complète</p><h2>Menu L’Étoile Clermont</h2><span class="note">Images Unsplash ultra premium : à remplacer par photos officielles si le restaurant les fournit.</span></div>
-      <div class="filters reveal" id="filters"></div>
-      <div class="menu-grid" id="menuGrid"></div>
+    <section class="section split">
+      <div class="section-head reveal">
+        <p>L’esprit L’Étoile</p>
+        <h2>Un site moins chargé, plus premium.</h2>
+      </div>
+      <div class="split-content reveal">
+        <div class="copy-card">
+          <h3>Carte séparée</h3>
+          <p>Le menu complet n’est plus tassé dans la page d’accueil. Il est maintenant dans une page dédiée, plus propre et plus facile à parcourir.</p>
+          <a class="btn" href="menu.html">Ouvrir la carte</a>
+        </div>
+        <div class="copy-card dark">
+          <h3>Commande rapide</h3>
+          <p>Les boutons d’appel restent accessibles sans remplir la première page avec trop d’informations.</p>
+          <a class="btn ghost" href="tel:0473905738">04 73 90 57 38</a>
+        </div>
+      </div>
     </section>
 
-    <section id="galerie" class="section gallery">
-      <div class="section-title reveal"><p>Galerie</p><h2>Ambiance food premium</h2></div>
+    <section class="section gallery" id="galerie">
+      <div class="section-head reveal"><p>Galerie</p><h2>Ambiance premium</h2></div>
       <div class="gallery-grid reveal">
-        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Burger">
-        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=900&q=85" alt="Tacos">
-        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85" alt="Frites">
-        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=900&q=85" alt="Sandwich">
+        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1000&q=85" alt="Burger" />
+        <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?auto=format&fit=crop&w=1000&q=85" alt="Tacos" />
+        <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1000&q=85" alt="Sandwich" />
+        <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=1000&q=85" alt="Dessert" />
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="section-title reveal"><p>Contact</p><h2>Deux restaurants à Clermont-Ferrand</h2></div>
+    <section class="section contact" id="contact">
+      <div class="section-head reveal"><p>Contact</p><h2>Deux adresses à Clermont-Ferrand</h2></div>
       <div class="contact-grid reveal">
-        <article><h3>L’ÉTOILE — BALLAINVILLIERS</h3><p>29 Rue Ballainvilliers, 63000 Clermont-Ferrand</p><a href="tel:0473905738">04 73 90 57 38</a></article>
-        <article><h3>L’ÉTOILE — MONTFERRAND</h3><p>2 Rue Debay Facy, 63000 Clermont-Ferrand</p><a href="tel:0463082410">04 63 08 24 10</a></article>
-        <article><h3>Horaires</h3><p>Ouvert 7j/7 — 10h00 à 01h00</p><a href="#carte">Voir la carte</a></article>
+        <article><h3>Ballainvilliers</h3><p>29 Rue Ballainvilliers, 63000 Clermont-Ferrand</p><a href="tel:0473905738">04 73 90 57 38</a></article>
+        <article><h3>Montferrand</h3><p>2 Rue Debay Facy, 63000 Clermont-Ferrand</p><a href="tel:0463082410">04 63 08 24 10</a></article>
+        <article><h3>Horaires</h3><p>Ouvert 7j/7 — 10h00 à 01h00</p><a href="menu.html">Consulter la carte</a></article>
       </div>
       <div class="maps reveal">
         <iframe title="Ballainvilliers" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand&output=embed" loading="lazy"></iframe>
@@ -84,7 +110,11 @@
     </section>
   </main>
 
-  <footer><img src="assets/logo-transparent.png" alt="Logo"><p>© L’Étoile Clermont — Premium restaurant website concept.</p><a href="tel:0473905738">Commander maintenant</a></footer>
+  <footer>
+    <img src="assets/logo-white.svg" alt="L'Étoile Clermont" />
+    <p>© L’Étoile Clermont — site premium.</p>
+    <a href="tel:0473905738">Commander maintenant</a>
+  </footer>
 
   <script src="menu-data.js"></script>
   <script src="script.js"></script>
