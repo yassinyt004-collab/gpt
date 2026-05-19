@@ -1,8 +1,81 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>L'Étoile Clermont — Tacos, Burgers, Sandwichs</title><meta name="description" content="L'Étoile Clermont-Ferrand: tacos, burgers, sandwichs, bowls, frites maison."><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;700;900&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
-<header class="nav"><a class="brand" href="#top"><img src="assets/logo.png"><span>CLERMONT</span></a><button class="hamb">☰</button><nav><a href="#carte">Carte</a><a href="#qualite">Qualité</a><a href="#galerie">Galerie</a><a href="#contact">Contact</a><a class="order" href="tel:0473905738">Commander</a></nav></header>
-<section id="top" class="hero"><img class="hero-img" src="assets/hero-cinematic.png" alt="L'Étoile Clermont banner"><div class="hero-overlay"></div><div class="hero-content"><div class="badges"><span>🥩 Viandes de qualité</span><span>🍟 Frites maison</span><span>🔥 Sauces signature</span><span>⭐ Qualité garantie</span></div><h1>LE GOÛT<br><b>DE L’EXCELLENCE</b></h1><p>TACOS • BURGERS • SANDWICHS • FRITES MAISON</p><div class="hero-actions"><a href="#carte">Voir la carte</a><a href="tel:0473905738">Commander maintenant</a></div></div></section>
-<main><section class="intro"><h2>Une carte généreuse, visuelle et premium</h2><p>Un site dark/orange façon banner publicitaire: grandes images, cartes produits premium, prix visibles et contact direct.</p></section>
-<section id="carte" class="menu-section"><div class="section-title"><p>Notre carte</p><h2>Menu complet</h2></div><div class="tabs" id="tabs"></div><div class="grid" id="menuGrid"></div></section>
-<section id="qualite" class="quality"><div><h2>Frais, généreux et tellement bon !</h2><p>Un univers visuel fort: noir profond, orange lumineux, fumée, braises et photos gourmandes.</p></div><div class="quality-cards"><article>🥩<b>Viandes de qualité</b><span>Sélectionnées avec soin</span></article><article>🔥<b>Cuisson maîtrisée</b><span>Saveurs sublimées</span></article><article>👨‍🍳<b>Recettes originales</b><span>Créations gourmandes</span></article><article>🧡<b>Fait avec passion</b><span>Pour votre plaisir</span></article></div></section>
-<section id="galerie" class="gallery"><div class="section-title"><p>Galerie</p><h2>Look food premium</h2></div><img src="assets/burger.jpg"><img src="assets/tacos.jpg"><img src="assets/wrap.jpg"><img src="assets/fries.jpg"><img src="assets/tenders.jpg"><img src="assets/mix.jpg"></section>
-<section id="contact" class="contact"><div><p class="eyebrow">Contact</p><h2>Commander ou venir sur place</h2><div class="addresses"><article><b>Ballainvilliers</b><span>29 Rue Ballainvilliers, 63000 Clermont-Ferrand</span><a href="tel:0473905738">04 73 90 57 38</a></article><article><b>Montferrand</b><span>2 Rue Debay Facy, 63000 Clermont-Ferrand</span><a href="tel:0463082410">04 63 08 24 10</a></article></div><p>Ouvert 7j/7 — 10h00 à 01h00</p></div><iframe src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand&output=embed"></iframe></section></main><footer>© L’Étoile Clermont — Site premium restaurant</footer><script src="menu-data.js"></script><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>L’Étoile Clermont — Tacos, Burgers & Bowls Premium</title>
+  <meta name="description" content="L’Étoile Clermont-Ferrand — tacos à composer, burgers, bowls, sandwiches, menus, tex-mex, desserts et boissons. Deux restaurants à Clermont-Ferrand." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav" id="nav">
+    <a class="brand" href="#top"><span class="star">★</span><span>L’ÉTOILE</span><small>Clermont</small></a>
+    <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    <nav class="links" id="links">
+      <a href="#top">Accueil</a><a href="#carte">Carte</a><a href="#best">Best Sellers</a><a href="#galerie">Galerie</a><a href="#contact">Contact</a>
+      <a class="nav-cta" href="https://www.ubereats.com/" target="_blank" rel="noreferrer">Commander</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="orb orb1"></div><div class="orb orb2"></div><div class="embers"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Tacos • Burgers • Bowls • Tex-Mex</p>
+        <h1>LE GOÛT DE <span>L’EXCELLENCE</span></h1>
+        <p class="lead">Une expérience fast-food premium à Clermont-Ferrand : recettes généreuses, sauces signature et compositions gourmandes.</p>
+        <div class="hero-actions"><a href="#carte" class="btn primary">Voir la carte</a><a href="#contact" class="btn ghost">Nous trouver</a></div>
+        <div class="stats"><b>7j/7</b><span>10h → 1h</span><b>2</b><span>adresses</span><b>100%</b><span>gourmand</span></div>
+      </div>
+      <div class="hero-plate reveal">
+        <div class="plate-glow"></div>
+        <img src="assets/hero-food.svg" alt="Composition burger tacos frites" />
+      </div>
+      <div class="scroll">Scroll</div>
+    </section>
+
+    <section class="intro section reveal">
+      <div><p class="eyebrow">Clermont-Ferrand</p><h2>Un site premium, sombre, rouge/orange, avec toute la vraie carte.</h2></div>
+      <p>Design cinematic inspiré des affiches restaurant modernes : gros visuels, cartes produit animées, filtres menu, map réelle et contact rapide.</p>
+    </section>
+
+    <section id="best" class="section">
+      <div class="section-head reveal"><p class="eyebrow">Signature</p><h2>Best sellers</h2><a href="#carte">Tout voir</a></div>
+      <div class="feature-grid" id="featured"></div>
+    </section>
+
+    <section id="carte" class="section menu-section">
+      <div class="section-head reveal"><p class="eyebrow">Notre carte</p><h2>Menu complet</h2><div class="search"><input id="search" placeholder="Rechercher: tacos, burger, tenders..." /></div></div>
+      <div class="tabs" id="tabs"></div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="section promise">
+      <div class="promise-card reveal"><span>🔥</span><h3>Design premium</h3><p>Animations, lumières, smoky background et hover effects.</p></div>
+      <div class="promise-card reveal"><span>🍔</span><h3>Produits visuels</h3><p>Chaque produit possède un visuel local, pas de liens externes cassés.</p></div>
+      <div class="promise-card reveal"><span>📍</span><h3>Infos réelles</h3><p>Adresses, téléphones et horaires du site officiel intégrés.</p></div>
+    </section>
+
+    <section id="galerie" class="section gallery-section">
+      <div class="section-head reveal"><p class="eyebrow">Galerie</p><h2>Food mood</h2></div>
+      <div class="gallery">
+        <img src="assets/gallery-burger.svg" alt="burger"><img src="assets/gallery-tacos.svg" alt="tacos"><img src="assets/gallery-fries.svg" alt="frites"><img src="assets/gallery-dessert.svg" alt="dessert">
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-copy reveal"><p class="eyebrow">Contact</p><h2>Commandez ou passez nous voir</h2><p>Deux adresses à Clermont-Ferrand. Boutons téléphone cliquables pour commander rapidement.</p>
+        <div class="locations">
+          <article><h3>L’ÉTOILE – BALLAINVILLIERS</h3><p>29 Rue Ballainvilliers<br>63000 Clermont Ferrand</p><a href="tel:0473905738">04.73.90.57.38</a></article>
+          <article><h3>L’ÉTOILE – MONTFERRAND</h3><p>2 Rue Debay Facy<br>63000 Clermont Ferrand</p><a href="tel:0463082410">04.63.08.24.10</a></article>
+        </div>
+      </div>
+      <div class="map-wrap reveal"><iframe title="Carte L'Etoile Clermont" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand%20France&output=embed" loading="lazy"></iframe><div class="hours">Ouvert 7j/7 • 10h00 – 1h00</div></div>
+    </section>
+  </main>
+  <footer><b>★ L’ÉTOILE CLERMONT</b><span>© 2026 — Site premium prêt GitHub / Netlify</span></footer>
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
