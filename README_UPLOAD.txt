@@ -1,1 +1,2 @@
-Final tweaks: Google Maps links/iframes fixed, delivery placeholders added, location icons, responsive logo CSS.
+Final mobile polish included: horizontal mobile filters, mobile call FAB, compact menu layout for minor categories, plus previous white premium tweaks.
+Extract ZIP and upload all files/folders.
