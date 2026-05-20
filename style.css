@@ -109,3 +109,217 @@
     padding-bottom: 300px !important;
   }
 }
+
+
+/* =========================================================
+   FINAL MOBILE HERO FIX
+   Fixes cramped mobile view + makes food background visible
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .site-header {
+    height: 82px !important;
+    padding: 0 22px !important;
+  }
+
+  .brand {
+    width: 190px !important;
+    min-width: 190px !important;
+    height: 74px !important;
+  }
+
+  .brand img {
+    width: 178px !important;
+    max-height: 68px !important;
+    object-fit: contain !important;
+  }
+
+  .main-nav {
+    top: 88px !important;
+    left: 16px !important;
+    right: 16px !important;
+    padding: 20px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 24px 70px rgba(50,31,0,.18) !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    display: block !important;
+    padding: 46px 24px 300px !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,.99) 0%,
+        rgba(255,255,255,.96) 48%,
+        rgba(255,255,255,.70) 63%,
+        rgba(255,247,234,.12) 100%
+      ),
+      url("assets/hero-background.jpg") 68% bottom / auto 52% no-repeat !important;
+  }
+
+  .hero-copy,
+  .hero-text {
+    max-width: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 11.2vw, 58px) !important;
+    line-height: 1.06 !important;
+    margin-top: 16px !important;
+    margin-bottom: 22px !important;
+    letter-spacing: .2px !important;
+  }
+
+  .hero p,
+  .lead {
+    max-width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.72 !important;
+  }
+
+  .chips,
+  .hero-points {
+    gap: 10px !important;
+    margin-top: 24px !important;
+  }
+
+  .chips span,
+  .hero-points span {
+    padding: 9px 12px !important;
+    font-size: 13px !important;
+    border-radius: 999px !important;
+  }
+
+  .actions,
+  .hero-actions {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    margin-top: 28px !important;
+  }
+
+  .actions .btn,
+  .hero-actions .btn,
+  .btn-large {
+    width: 100% !important;
+    min-height: 56px !important;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    height: 78px !important;
+    padding: 0 18px !important;
+  }
+
+  .brand {
+    width: 172px !important;
+    min-width: 172px !important;
+    height: 70px !important;
+  }
+
+  .brand img {
+    width: 164px !important;
+    max-height: 64px !important;
+  }
+
+  .menu-toggle {
+    padding: 10px !important;
+  }
+
+  .menu-toggle span {
+    width: 27px !important;
+    height: 3px !important;
+    margin: 5px 0 !important;
+  }
+
+  .main-nav {
+    top: 84px !important;
+  }
+
+  .hero {
+    padding: 40px 18px 275px !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,.97) 50%,
+        rgba(255,255,255,.75) 66%,
+        rgba(255,247,234,.08) 100%
+      ),
+      url("assets/hero-background.jpg") 72% bottom / auto 48% no-repeat !important;
+  }
+
+  .eyebrow,
+  .label {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.55 !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 12vw, 52px) !important;
+    line-height: 1.06 !important;
+    max-width: 360px !important;
+  }
+
+  .hero p,
+  .lead {
+    font-size: 15.5px !important;
+    line-height: 1.72 !important;
+  }
+
+  .chips,
+  .hero-points {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 9px !important;
+  }
+
+  .chips span,
+  .hero-points span {
+    font-size: 12.5px !important;
+    padding: 9px 11px !important;
+  }
+
+  .layout,
+  .section,
+  .menu-zone,
+  .map-grid,
+  .maps {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand {
+    width: 156px !important;
+    min-width: 156px !important;
+  }
+
+  .brand img {
+    width: 148px !important;
+    max-height: 60px !important;
+  }
+
+  .hero {
+    padding: 38px 16px 255px !important;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,.97) 53%,
+        rgba(255,255,255,.72) 68%,
+        rgba(255,247,234,.08) 100%
+      ),
+      url("assets/hero-background.jpg") 74% bottom / auto 46% no-repeat !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(36px, 12vw, 48px) !important;
+  }
+}
