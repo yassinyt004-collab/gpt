@@ -1,2 +1,2 @@
-Mobile responsive overhaul applied: spacious hero, clean mobile nav, improved cards, touch-friendly menu, better spacing.
-Extract ZIP and upload all files/folders.
+Redesign complet: design blanc/crème premium, hero propre, mobile clean, menu filtrable, cartes Google, CTA appel.
+Dézippe puis upload tous les fichiers/dossiers dans ton repo.
