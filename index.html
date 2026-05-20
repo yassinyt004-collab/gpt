@@ -7,18 +7,13 @@
   <meta name="description" content="L’Étoile Clermont-Ferrand : tacos, burgers maison, sandwichs, bowls, frites et menus gourmands à Clermont-Ferrand." />
   <meta name="keywords" content="Fast Food Clermont-Ferrand, Tacos Clermont, Burgers Maison, L'Étoile Clermont-Ferrand" />
   <meta name="theme-color" content="#ffffff" />
-  
-<a class="mobile-call-fab" href="tel:0473905738" aria-label="Appeler L’Étoile Clermont">
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1.3.4 2.6.6 4 .6.7 0 1.2.5 1.2 1.2v3.5c0 .7-.5 1.2-1.2 1.2C10.9 21.4 2.6 13.1 2.6 3.4c0-.7.5-1.2 1.2-1.2h3.5c.7 0 1.2.5 1.2 1.2 0 1.4.2 2.7.6 4 .1.4 0 .9-.3 1.2l-2.2 2.2Z" fill="currentColor"/>
-  </svg>
-  Appeler
-</a>
-
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Restaurant","name":"L’Étoile Clermont","servesCuisine":["Fast Food","Tacos","Burgers"],"address":[{"@type":"PostalAddress","streetAddress":"29 Rue Ballainvilliers","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"},{"@type":"PostalAddress","streetAddress":"2 Rue Debay Facy","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"}],"telephone":["+33473905738","+33463082410"]}</script>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Restaurant","name":"L’Étoile Clermont","servesCuisine":["Fast Food","Tacos","Burgers"],"address":[{"@type":"PostalAddress","streetAddress":"29 Rue Ballainvilliers","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"},{"@type":"PostalAddress","streetAddress":"2 Rue Debay Facy","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"}],"telephone":["+33473905738","+33463082410"]}
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
 <header class="site-header">
   <a class="brand" href="index.html"><img src="assets/logo.png" alt="L'Étoile Clermont"></a>
   <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -28,90 +23,111 @@
     <a href="#best">Best Sellers</a>
     <a href="#restaurants">Restaurants</a>
     <a href="#contact">Contact</a>
-    <a class="phone-pill" href="tel:0473905738">04 73 90 57 38</a>
     <a class="btn" href="tel:0473905738">Commander</a>
   </nav>
 </header>
 
 <main>
-<section class="hero">
-  <div class="hero-text reveal">
-    <p class="eyebrow">Fast food premium à Clermont-Ferrand</p>
-    <h1>L’Étoile <span>Clermont</span></h1>
-    <p class="lead">Tacos, burgers, sandwichs, bowls et frites maison. Un design clair, moderne et gourmand pour commander vite.</p>
-    <div class="chips"><span>Produits frais</span><span>Fait maison</span><span>Qualité premium</span></div>
-    <div class="actions"><a class="btn big" href="tel:0473905738">Commander maintenant</a><a class="btn outline" href="menu.html">Voir la carte</a></div>
-  </div>
-  <div class="hero-food reveal">
-    <img class="wrap" src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=1000&q=90" alt="Tacos">
-    <img class="burger" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=90" alt="Burger">
-    <img class="fries" src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=90" alt="Frites">
-  </div>
-</section>
-
-<section class="layout">
-  <div class="main-col">
-    <section class="section" id="best">
-      <div class="section-head"><div><p>Nos Best Sellers</p><h2>Les favoris de la maison</h2></div><a href="menu.html">Voir toute la carte →</a></div>
-      <div class="cards">
-        <article class="card"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=800&q=90"><div><h3>Tacos XL</h3><p>Viande au choix, sauce fromagère, frites maison.</p><strong>8,90 €</strong><a href="tel:0473905738">+</a></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=90"><div><h3>Burger L’Étoile</h3><p>Steak, cheddar, bacon, salade, sauce secrète.</p><strong>9,90 €</strong><a href="tel:0473905738">+</a></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=90"><div><h3>Bowl Poulet</h3><p>Poulet mariné, riz, légumes frais, sauce maison.</p><strong>9,50 €</strong><a href="tel:0473905738">+</a></div></article>
-        <article class="card"><img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=800&q=90"><div><h3>Menu Smash</h3><p>Smash burger, frites maison, boisson.</p><strong>10,90 €</strong><a href="tel:0473905738">+</a></div></article>
+  <section class="hero">
+    <div class="hero-text">
+      <p class="eyebrow">Fast Food Premium</p>
+      <h1>L’Étoile Clermont</h1>
+      <p>Découvrez le vrai goût du premium. Des ingrédients frais, des sauces maison onctueuses et des recettes signatures uniques qui font toute la différence.</p>
+      <div class="actions">
+        <a class="btn primary" href="menu.html">Consulter la carte</a>
+        <a class="btn secondary" href="tel:0473905738">Appeler Ballainvilliers</a>
       </div>
-    </section>
-    <section class="features">
-      <article>🚚 <b>Livraison rapide</b><small>À domicile ou au bureau</small></article>
-      <article>💳 <b>Paiement sécurisé</b><small>Carte & espèces</small></article>
-      <article>🕒 <b>Ouvert 7j/7</b><small>10h00 à 01h00</small></article>
-      <article>⭐ <b>Qualité premium</b><small>Recettes généreuses</small></article>
-    </section>
+    </div>
+    <div class="hero-food">
+      <div class="wrap"></div>
+      <div class="burger"></div>
+      <div class="fries"></div>
+    </div>
+  </section>
+
+  <div class="section-title" id="best">
+    <h2>Nos Best Sellers</h2>
+    <p>Les recettes incontournables plébiscitées par nos clients fidèles.</p>
   </div>
 
-  <aside class="side" id="restaurants">
-    <section class="panel"><h2>Nos restaurants</h2>
-      <article class="restaurant">
-        <img src="https://images.unsplash.com/photo-1555992336-03a23c7b20ee?auto=format&fit=crop&w=300&q=80" alt="Restaurant Ballainvilliers">
-        <div>
-          <h3>Ballainvilliers</h3>
-          <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=29%20Rue%20Ballainvilliers%2C%2063000%20Clermont-Ferrand">
-            <svg class="map-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
-            29 Rue Ballainvilliers, 63000 Clermont-Ferrand
-          </a>
-          <a class="phone" href="tel:0473905738">04 73 90 57 38</a>
+  <section class="layout">
+    <div class="cards" id="bestGrid">
+      </div>
+
+    <aside class="side" id="restaurants">
+      <article class="panel locations">
+        <h2>Nos Restaurants</h2>
+        <div class="restaurant">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=300&q=80" alt="L'Étoile Ballainvilliers">
+          <div>
+            <h3>Ballainvilliers</h3>
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=29+Rue+Ballainvilliers+63000+Clermont-Ferrand">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              29 Rue Ballainvilliers, 63000
+            </a>
+            <a class="phone" href="tel:0473905738">04 73 90 57 38</a>
+          </div>
+        </div>
+        <div class="restaurant">
+          <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="L'Étoile Montferrand">
+          <div>
+            <h3>Montferrand</h3>
+            <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://maps.google.com/?q=2+Rue+Debay+Facy+63000+Clermont-Ferrand">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              2 Rue Debay Facy, 63000
+            </a>
+            <a class="phone" href="tel:0463082410">04 63 08 24 10</a>
+          </div>
         </div>
       </article>
-      <article class="restaurant">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=300&q=80" alt="Restaurant Montferrand">
+
+      <article class="panel delivery" id="contact">
+        <h2>Commandez sur</h2>
         <div>
-          <h3>Montferrand</h3>
-          <a class="map-link" target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/search/?api=1&query=2%20Rue%20Debay%20Facy%2C%2063000%20Clermont-Ferrand">
-            <svg class="map-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.2 7-12a7 7 0 1 0-14 0c0 6.8 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
-            2 Rue Debay Facy, 63000 Clermont-Ferrand
-          </a>
-          <a class="phone" href="tel:0463082410">04 63 08 24 10</a>
+          <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer">Uber Eats</a>
+          <a href="https://deliveroo.fr" target="_blank" rel="noopener noreferrer">Deliveroo</a>
         </div>
       </article>
-    </section>
-    <section class="panel delivery" id="contact">
-      <h2>Commandez sur</h2>
-      <div>
-        <!-- Replace this placeholder with the real Uber Eats restaurant URL -->
-        <a href="https://ubereats.com" target="_blank" rel="noopener noreferrer">Uber Eats</a>
-        <!-- Replace this placeholder with the real Deliveroo restaurant URL -->
-        <a href="https://deliveroo.fr" target="_blank" rel="noopener noreferrer">Deliveroo</a>
-      </div>
-    </section>
-  </aside>
-</section>
+    </aside>
+  </section>
 
-<section class="maps">
-  <iframe title="L’Étoile Ballainvilliers Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2C%2063000%20Clermont-Ferrand&output=embed"></iframe>
-  <iframe title="L’Étoile Montferrand Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2%20Rue%20Debay%20Facy%2C%2063000%20Clermont-Ferrand&output=embed"></iframe>
-</section>
+  <section class="maps">
+    <iframe title="L’Étoile Ballainvilliers Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.4239851613093!2d3.0850257769165386!3d45.77271921313437!2m3!1f0!2f0!3f0!3m2!1i1024!2i1000!1f0!3f0!3m2!1m1!2zNDXCsDQ2JzIxLjgiTiAzwrAwNScxNS40IkU!5e0!3m2!1sfr!2sfr!4v1710000000000!5m2!1sfr!2sfr"></iframe>
+    <iframe title="L’Étoile Montferrand Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.4439066601445!2d3.1118181769174154!3d45.792372411818274!2m3!1f0!2f0!3f0!3m2!1i1024!2i1000!1f0!3f0!3m2!1m1!2zNDXCsDQ3JzMyLjUiTiAzwrAwNyc1MS40IkU!5e0!3m2!1sfr!2sfr!4v1710000000001!5m2!1sfr!2sfr"></iframe>
+  </section>
 </main>
 
-<footer><img src="assets/logo.png" alt="L'Étoile"><p>© L’Étoile Clermont — Fast food premium à Clermont-Ferrand.</p><a href="menu.html">Voir la carte</a></footer>
+<footer>
+  <img src="assets/logo.png" alt="L'Étoile">
+  <p>© L’Étoile Clermont — Tous droits réservés.</p>
+  <a href="menu.html">Voir le menu complet</a>
+</footer>
+
+<a class="mobile-call-fab" href="tel:0473905738" aria-label="Appeler L’Étoile Clermont">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+  </svg>
+  <span>Appeler</span>
+</a>
+
+<script src="menu-data.js"></script>
 <script src="script.js"></script>
+<script>
+  // Dynamic Best Sellers inject
+  if(typeof menuData !== 'undefined' && document.getElementById('bestGrid')){
+    const bGrid = document.getElementById('bestGrid');
+    let count = 0;
+    menuData.forEach(g => g.items.forEach((item, index) => {
+      if(index === 0 && count < 4) {
+        const [name, desc, price, image] = item;
+        const art = document.createElement('article');
+        art.className = 'menu-card reveal';
+        art.innerHTML = `<span class="cat">${g.category}</span><img src="${image}" alt="${name}" loading="lazy"><div class="body"><h3>${name}</h3><p>${desc}</p><div class="price"><span>${price}</span><a class="mini-order" href="tel:0473905738">Commander</a></div></div>`;
+        bGrid.appendChild(art);
+        count++;
+      }
+    }));
+  }
+</script>
 </body>
 </html>
