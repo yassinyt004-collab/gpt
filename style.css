@@ -16,3 +16,96 @@
   .brand{width:165px;min-width:165px}
   .brand img{width:160px;max-width:160px;max-height:62px}
 }
+
+
+/* =========================================================
+   HERO BACKGROUND UPDATE — clean generated food background
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: calc(100vh - 92px);
+  display: flex !important;
+  align-items: center;
+  grid-template-columns: none !important;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 34%, rgba(255,255,255,.50) 58%, rgba(255,255,255,.05) 100%),
+    url("assets/hero-background.jpg") center right / cover no-repeat !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 30%, rgba(244,154,0,.09), transparent 28rem),
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,247,234,.34));
+  pointer-events: none;
+}
+
+.hero-copy,
+.hero-text {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.hero-gallery,
+.hero-food {
+  display: none !important;
+}
+
+.hero h1 {
+  text-shadow: none;
+}
+
+.hero p,
+.lead {
+  color: #3f372d;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 72px 24px 380px !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.98) 0%, rgba(255,255,255,.94) 48%, rgba(255,255,255,.20) 78%, rgba(255,247,234,.14) 100%),
+      url("assets/hero-background.jpg") center bottom / cover no-repeat !important;
+  }
+
+  .hero-copy,
+  .hero-text {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  .hero {
+    padding: 48px 20px 330px !important;
+    gap: 0 !important;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,.99) 0%, rgba(255,255,255,.95) 54%, rgba(255,255,255,.28) 82%, rgba(255,247,234,.08) 100%),
+      url("assets/hero-background.jpg") 64% bottom / cover no-repeat !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 13vw, 60px) !important;
+    line-height: 1.05 !important;
+  }
+
+  .hero p,
+  .lead {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    padding-bottom: 300px !important;
+  }
+}
