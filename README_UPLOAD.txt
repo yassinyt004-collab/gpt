@@ -1,1 +1,1 @@
-White premium design. Extract ZIP and upload all files/folders to GitHub/Vercel/Netlify.
+Final tweaks: Google Maps links/iframes fixed, delivery placeholders added, location icons, responsive logo CSS.
