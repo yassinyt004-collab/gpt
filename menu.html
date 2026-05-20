@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carte — L’Étoile Clermont-Ferrand</title>
   <meta name="description" content="Carte complète L’Étoile Clermont-Ferrand : tacos à composer, tacos signatures, burgers maison, sandwichs, bowls, menus, texmex, desserts et boissons." />
+
   <meta name="keywords" content="Fast Food Clermont-Ferrand, Tacos Clermont, Burgers Maison, L'Étoile Clermont-Ferrand, tacos Clermont-Ferrand, burgers Clermont, sandwichs Clermont, restaurant Clermont-Ferrand" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="L’Étoile Clermont" />
@@ -23,22 +24,26 @@
     "servesCuisine": ["Fast Food", "Tacos", "Burgers", "Sandwichs"],
     "priceRange": "€€",
     "address": [
-      {"@type": "PostalAddress", "streetAddress": "29 Rue Ballainvilliers", "addressLocality": "Clermont-Ferrand", "postalCode": "63000", "addressCountry": "FR"},
-      {"@type": "PostalAddress", "streetAddress": "2 Rue Debay Facy", "addressLocality": "Clermont-Ferrand", "postalCode": "63000", "addressCountry": "FR"}
+      {"@type":"PostalAddress","streetAddress":"29 Rue Ballainvilliers","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"},
+      {"@type":"PostalAddress","streetAddress":"2 Rue Debay Facy","addressLocality":"Clermont-Ferrand","postalCode":"63000","addressCountry":"FR"}
     ],
     "telephone": ["+33473905738", "+33463082410"],
     "url": "https://gpt-pi-pearl.vercel.app/"
   }
   </script>
+
+  <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="menu-page">
   <header class="site-header">
-    <a class="brand" href="index.html" aria-label="Accueil L'Étoile Clermont">
-      <img src="assets/logo-nav-pro.png" alt="L’Étoile Clermont">
+    <a class="brand" href="index.html" aria-label="Accueil L’Étoile Clermont">
+      <img src="assets/logo.png" alt="L’Étoile Clermont" />
     </a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span><span></span></button>
-    <nav class="main-nav">
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
       <a href="menu.html" class="active">Carte</a>
       <a href="index.html#best">Best Sellers</a>
@@ -50,11 +55,12 @@
 
   <main>
     <section class="menu-hero">
-      <div class="menu-hero-bg"></div>
       <div class="section-head reveal">
-        <p>Carte complète</p>
-        <h1>Menu L’Étoile Clermont</h1>
-        <span>Produits organisés par catégories. Clique sur une catégorie pour filtrer rapidement.</span>
+        <div>
+          <p>Carte complète</p>
+          <h1>Menu L’Étoile Clermont</h1>
+          <span>Filtre par catégorie et appelle directement pour commander.</span>
+        </div>
       </div>
     </section>
 
@@ -65,8 +71,8 @@
   </main>
 
   <footer>
-    <img class="footer-logo" src="assets/logo-footer-pro.png" alt="L’Étoile Clermont">
-    <p>© L’Étoile Clermont — carte complète.</p>
+    <img src="assets/logo.png" alt="L’Étoile Clermont" />
+    <p>© L’Étoile Clermont — Carte complète.</p>
     <a href="index.html">Retour accueil</a>
   </footer>
 
