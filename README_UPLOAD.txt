@@ -1,1 +1,2 @@
-Menu updated using Borneo real categories/products/prices. Some product images use Borneo remote image URLs where extractable; others use clean category images with fallback.
+Fixed: hero background restored and real Borneo menu data added with extracted Firebase product images where available + good fallbacks.
+Upload all files/folders after extracting ZIP.
