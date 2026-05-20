@@ -3,8 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L’Étoile Clermont — Tacos, Burgers & Sandwichs</title>
-  <meta name="description" content="L’Étoile Clermont-Ferrand : tacos, burgers, sandwichs, bowls, frites maison, menus et box." />
+  <title>L’Étoile Clermont-Ferrand — Tacos, Burgers & Fast Food Premium</title>
+  <meta name="description" content="L’Étoile Clermont-Ferrand, fast food premium à Clermont-Ferrand : tacos, burgers maison, sandwichs, bowls, frites et menus gourmands. Commandez ou trouvez nos restaurants Ballainvilliers et Montferrand." />
+  <meta name="keywords" content="Fast Food Clermont-Ferrand, Tacos Clermont, Burgers Maison, L'Étoile Clermont-Ferrand, tacos Clermont-Ferrand, burgers Clermont, sandwichs Clermont, restaurant Clermont-Ferrand" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="L’Étoile Clermont" />
+  <meta property="og:title" content="L’Étoile Clermont-Ferrand — Tacos, Burgers & Fast Food Premium" />
+  <meta property="og:description" content="Découvrez L’Étoile Clermont : tacos, burgers maison, sandwichs, bowls et menus gourmands à Clermont-Ferrand." />
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://gpt-pi-pearl.vercel.app/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#050303" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "L’Étoile Clermont",
+    "servesCuisine": ["Fast Food", "Tacos", "Burgers", "Sandwichs"],
+    "priceRange": "€€",
+    "address": [
+      {"@type": "PostalAddress", "streetAddress": "29 Rue Ballainvilliers", "addressLocality": "Clermont-Ferrand", "postalCode": "63000", "addressCountry": "FR"},
+      {"@type": "PostalAddress", "streetAddress": "2 Rue Debay Facy", "addressLocality": "Clermont-Ferrand", "postalCode": "63000", "addressCountry": "FR"}
+    ],
+    "telephone": ["+33473905738", "+33463082410"],
+    "url": "https://gpt-pi-pearl.vercel.app/"
+  }
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -109,6 +134,54 @@
       </div>
     </section>
   </main>
+
+
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="section-head reveal">
+        <div>
+          <p>Contact</p>
+          <h2 id="contact-title">Nous trouver à Clermont-Ferrand</h2>
+        </div>
+      </div>
+
+      <div class="contact-grid reveal">
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div>
+            <h3>Ballainvilliers</h3>
+            <a class="address-link" href="https://www.google.com/maps/search/?api=1&query=29%20Rue%20Ballainvilliers%2C%2063000%20Clermont-Ferrand%2C%20France" target="_blank" rel="noopener noreferrer">29 Rue Ballainvilliers, 63000 Clermont-Ferrand</a>
+            <a class="phone-link" href="tel:0473905738">04 73 90 57 38</a>
+          </div>
+        </article>
+
+        <article class="contact-card">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12Z" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <div>
+            <h3>Montferrand</h3>
+            <a class="address-link" href="https://www.google.com/maps/search/?api=1&query=2%20Rue%20Debay%20Facy%2C%2063000%20Clermont-Ferrand%2C%20France" target="_blank" rel="noopener noreferrer">2 Rue Debay Facy, 63000 Clermont-Ferrand</a>
+            <a class="phone-link" href="tel:0463082410">04 63 08 24 10</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="cta-delivery-box reveal">
+        <a class="main-call-btn" href="tel:0473905738">Appeler maintenant</a>
+        <div class="delivery-buttons" aria-label="Plateformes de livraison">
+          <a class="delivery-btn" href="#" aria-label="Commander sur Uber Eats">Uber Eats</a>
+          <a class="delivery-btn" href="#" aria-label="Commander sur Deliveroo">Deliveroo</a>
+        </div>
+      </div>
+
+      <div class="maps reveal">
+        <div class="map-card"><iframe title="L’Étoile Ballainvilliers Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=29%20Rue%20Ballainvilliers%2063000%20Clermont-Ferrand%20France&output=embed"></iframe></div>
+        <div class="map-card"><iframe title="L’Étoile Montferrand Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=2%20Rue%20Debay%20Facy%2063000%20Clermont-Ferrand%20France&output=embed"></iframe></div>
+      </div>
+    </section>
+
 
   <footer>
     <img class="footer-logo" src="assets/logo-footer-pro.png" alt="L’Étoile Clermont">

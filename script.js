@@ -56,3 +56,15 @@ function initFilters() {
 }
 
 initFilters();
+
+
+// Smooth fade when moving between pages
+document.querySelectorAll('a[href$=".html"], a[href="menu.html"], a[href="index.html"]').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    const href = link.getAttribute('href');
+    if (!href || link.target === '_blank' || href.startsWith('#') || href.startsWith('tel:')) return;
+    event.preventDefault();
+    document.body.classList.add('page-exit');
+    setTimeout(() => { window.location.href = href; }, 180);
+  });
+});
