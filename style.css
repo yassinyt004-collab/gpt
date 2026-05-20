@@ -135,3 +135,651 @@
     font-size: 12px;
   }
 }
+
+
+/* =========================================================
+   MOBILE RESPONSIVE OVERHAUL
+   Clean • Spacious • Premium • Touch-friendly
+   ========================================================= */
+
+/* Tablet / small desktop */
+@media (max-width: 900px) {
+  body {
+    background: var(--bg);
+  }
+
+  .site-header {
+    height: 86px;
+    padding: 0 24px;
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 12px 35px rgba(40, 24, 0, 0.08);
+  }
+
+  .brand {
+    width: 220px;
+    min-width: 220px;
+    height: 78px;
+  }
+
+  .brand img {
+    width: 210px;
+    max-width: 210px;
+    max-height: 72px;
+    object-fit: contain;
+  }
+
+  .menu-toggle {
+    display: block;
+    padding: 12px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 25px rgba(40, 24, 0, 0.08);
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 86px;
+    left: 18px;
+    right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding: 22px;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: 0 24px 70px rgba(40, 24, 0, 0.16);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  .main-nav.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .main-nav a {
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 14px;
+  }
+
+  .main-nav a:not(.btn):hover {
+    background: #fff7e8;
+  }
+
+  .main-nav .btn,
+  .phone-pill {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 54px 24px 48px;
+    min-height: auto;
+  }
+
+  .hero-text {
+    max-width: 680px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 12vw, 76px);
+    line-height: 1.02;
+    margin-bottom: 24px;
+  }
+
+  .lead {
+    font-size: 18px;
+    line-height: 1.75;
+    max-width: 620px;
+  }
+
+  .chips {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .hero-actions,
+  .actions {
+    gap: 14px;
+    margin-top: 34px;
+  }
+
+  .hero-food {
+    order: -1;
+    height: auto;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .food {
+    position: static;
+    width: 100%;
+    height: 240px;
+    transform: none;
+    border-radius: 24px;
+  }
+
+  .burger {
+    grid-row: span 2;
+    height: 100%;
+    min-height: 360px;
+  }
+
+  .wrap,
+  .fries {
+    height: 172px;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 34px;
+    padding: 18px 24px 70px;
+  }
+
+  .section {
+    padding: 48px 0;
+  }
+
+  .section-head {
+    display: block;
+    margin-bottom: 34px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(30px, 7vw, 44px);
+    line-height: 1.2;
+  }
+
+  .cards,
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .features article {
+    padding: 8px;
+  }
+
+  .side {
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .panel {
+    padding: 26px;
+    border-radius: 24px;
+  }
+
+  .restaurant {
+    grid-template-columns: 92px 1fr;
+    gap: 18px;
+    padding: 18px 0;
+  }
+
+  .restaurant img {
+    width: 92px;
+    height: 84px;
+    border-radius: 18px;
+  }
+
+  .maps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0 24px 80px;
+  }
+
+  .maps iframe {
+    min-height: 340px;
+    border-radius: 24px;
+  }
+
+  .menu-hero {
+    padding: 58px 24px 42px;
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(42px, 10vw, 72px);
+    line-height: 1.05;
+  }
+
+  .menu-zone {
+    padding: 34px 24px 80px;
+  }
+
+  .filters {
+    top: 100px;
+    gap: 10px;
+    padding: 14px;
+    border-radius: 22px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .menu-card {
+    border-radius: 22px;
+  }
+
+  .menu-card img {
+    height: 220px;
+  }
+
+  .menu-card .body {
+    padding: 20px;
+  }
+
+  .price {
+    gap: 14px;
+  }
+
+  .mini-order {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  body {
+    background: #fffaf3;
+  }
+
+  .site-header {
+    height: 78px;
+    padding: 0 18px;
+  }
+
+  .brand {
+    width: 185px;
+    min-width: 185px;
+    height: 72px;
+  }
+
+  .brand img {
+    width: 178px;
+    max-width: 178px;
+    max-height: 68px;
+  }
+
+  .menu-toggle {
+    padding: 10px;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+  }
+
+  .main-nav {
+    top: 86px;
+    left: 14px;
+    right: 14px;
+    padding: 20px;
+    gap: 12px;
+    border-radius: 22px;
+  }
+
+  .main-nav a {
+    min-height: 50px;
+    font-size: 15px;
+  }
+
+  .hero {
+    padding: 34px 20px 54px;
+    gap: 34px;
+  }
+
+  .hero-food {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    height: auto;
+    margin-top: 8px;
+  }
+
+  .food {
+    position: static;
+    transform: none;
+    width: 100%;
+    border-radius: 22px;
+  }
+
+  .burger {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    height: 245px;
+    min-height: 245px;
+  }
+
+  .wrap,
+  .fries {
+    height: 150px;
+  }
+
+  .hero-text {
+    padding-top: 4px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 1.06;
+    margin-bottom: 22px;
+  }
+
+  .lead {
+    font-size: 16px;
+    line-height: 1.75;
+  }
+
+  .chips {
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  .chips span {
+    padding: 10px 13px;
+    font-size: 13px;
+  }
+
+  .actions,
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .actions .btn,
+  .hero-actions .btn,
+  .btn.big,
+  .btn.outline {
+    width: 100%;
+    min-height: 56px;
+  }
+
+  .layout {
+    padding: 10px 20px 66px;
+    gap: 36px;
+  }
+
+  .section {
+    padding: 42px 0;
+  }
+
+  .section-head {
+    margin-bottom: 28px;
+  }
+
+  .section-head h2 {
+    font-size: clamp(28px, 9vw, 38px);
+    line-height: 1.22;
+  }
+
+  .section-head a {
+    display: inline-flex;
+    margin-top: 14px;
+  }
+
+  .cards,
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card,
+  .product-card {
+    border-radius: 22px;
+  }
+
+  .card img,
+  .product-card img {
+    height: 230px;
+  }
+
+  .card div,
+  .product-card div {
+    padding: 20px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .features article {
+    min-height: 72px;
+    padding: 12px;
+    border-radius: 18px;
+    background: #fffaf3;
+  }
+
+  .panel {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .restaurant {
+    grid-template-columns: 82px 1fr;
+    gap: 16px;
+    padding: 18px 0;
+  }
+
+  .restaurant img {
+    width: 82px;
+    height: 78px;
+    border-radius: 16px;
+  }
+
+  .restaurant a {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .delivery div {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .delivery a {
+    min-height: 56px;
+  }
+
+  .maps {
+    padding: 0 20px 76px;
+    gap: 20px;
+  }
+
+  .maps iframe {
+    min-height: 310px;
+    border-radius: 22px;
+  }
+
+  .menu-hero {
+    padding: 44px 20px 34px;
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: 1.08;
+  }
+
+  .menu-hero p:last-child {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .menu-zone {
+    padding: 28px 20px 84px;
+  }
+
+  .filters {
+    position: sticky;
+    top: 88px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    padding: 14px 16px;
+    margin: 0 -4px 28px;
+    border-radius: 22px;
+  }
+
+  .filters button {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 0 18px;
+    scroll-snap-align: start;
+  }
+
+  .filters::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filters {
+    scrollbar-width: none;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .menu-card .body {
+    padding: 22px;
+  }
+
+  .menu-card h3 {
+    font-size: 20px;
+    line-height: 1.25;
+    margin-bottom: 10px;
+  }
+
+  .menu-card p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .price {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .price span {
+    font-size: 24px;
+  }
+
+  .mini-order {
+    width: 100%;
+    min-height: 48px;
+    font-size: 15px;
+    border-radius: 14px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 36px 20px 92px;
+    gap: 14px;
+  }
+
+  footer img {
+    width: 138px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+  .brand {
+    width: 160px;
+    min-width: 160px;
+  }
+
+  .brand img {
+    width: 154px;
+    max-width: 154px;
+  }
+
+  .hero {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .layout,
+  .menu-zone,
+  .maps {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 13vw, 50px);
+  }
+
+  .burger {
+    height: 220px;
+    min-height: 220px;
+  }
+
+  .wrap,
+  .fries {
+    height: 135px;
+  }
+}
